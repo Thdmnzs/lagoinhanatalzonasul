@@ -1,0 +1,100 @@
+import { motion } from "motion/react";
+import { ArrowRight, ChevronDown } from "lucide-react";
+import heroImg from "@/assets/hero.jpg";
+
+export function Hero() {
+  return (
+    <section id="inicio" className="relative min-h-screen w-full overflow-hidden grain">
+      <motion.div
+        initial={{ scale: 1.15 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 8, ease: "easeOut" }}
+        className="absolute inset-0"
+      >
+        <img
+          src={heroImg}
+          alt="Culto cinematográfico"
+          className="h-full w-full object-cover"
+          width={1920}
+          height={1080}
+        />
+      </motion.div>
+
+      {/* Overlays */}
+      <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,var(--background)_85%)]" />
+
+      <div className="relative z-10 mx-auto flex min-h-screen max-w-6xl flex-col items-center justify-center px-6 text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.2 }}
+          className="mb-8 inline-flex items-center gap-3 rounded-full border border-gold/30 bg-background/40 px-4 py-1.5 backdrop-blur-sm"
+        >
+          <span className="h-1.5 w-1.5 rounded-full bg-gold animate-pulse" />
+          <span className="text-[10px] uppercase tracking-[0.3em] text-gold/90">
+            Natal · Rio Grande do Norte
+          </span>
+        </motion.div>
+
+        <motion.h1
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.1, delay: 0.4 }}
+          className="font-display font-bold leading-[0.95] tracking-tight text-5xl sm:text-7xl lg:text-[8.5rem]"
+        >
+          Lagoinha <br />
+          <span className="text-gradient-gold italic font-medium">Zona Sul</span>
+        </motion.h1>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.7 }}
+          className="mt-8 max-w-2xl text-base sm:text-lg text-foreground/80 font-light leading-relaxed"
+        >
+          Uma igreja para pertencer, crescer e viver o propósito de Deus.
+          <span className="block mt-2 text-sm uppercase tracking-[0.25em] text-gold/80">
+            Bem-vindo ao novo. Bem-vindo para casa.
+          </span>
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.9 }}
+          className="mt-12 flex flex-col sm:flex-row gap-4"
+        >
+          <a
+            href="#contato"
+            className="group inline-flex items-center justify-center gap-2 rounded-full bg-gold px-8 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-gold-foreground shadow-glow hover:shadow-[0_0_80px_-5px_var(--gold-glow)] transition-all"
+          >
+            Visite-nos
+            <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+          </a>
+          <a
+            href="#contato"
+            className="inline-flex items-center justify-center gap-2 rounded-full border border-foreground/20 bg-foreground/5 px-8 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-foreground backdrop-blur-sm hover:bg-foreground/10 transition-all"
+          >
+            Fale Conosco
+          </a>
+        </motion.div>
+      </div>
+
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.5, duration: 1 }}
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-gold/70"
+      >
+        <span className="text-[10px] uppercase tracking-[0.3em]">Scroll</span>
+        <motion.div
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 2, repeat: Infinity }}
+        >
+          <ChevronDown size={18} />
+        </motion.div>
+      </motion.div>
+    </section>
+  );
+}
