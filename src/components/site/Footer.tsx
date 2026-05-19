@@ -14,7 +14,7 @@ export function Footer() {
               </div>
             </div>
             <p className="mt-6 font-display text-3xl lg:text-4xl font-bold leading-tight max-w-md">
-              Amamos, <span className="text-gradient-gold italic">Vivemos</span> e Servimos.
+              <span className="text-gradient-gold italic">Grande para servir</span>, pequena para se importar.
             </p>
           </div>
 
@@ -36,12 +36,18 @@ export function Footer() {
               Neópolis, Natal — RN
             </p>
             <div className="mt-6 flex gap-3">
-              {[Instagram, Youtube, Facebook].map((Icon, i) => (
+              {[
+                { Icon: Instagram, href: "https://www.instagram.com/lagoinhanatalzonasul/", label: "Instagram" },
+                { Icon: Youtube, href: "https://www.youtube.com/@LagoinhaNatalZonaSul", label: "YouTube" },
+                { Icon: Facebook, href: "#", label: "Facebook" },
+              ].map(({ Icon, href, label }) => (
                 <a
-                  key={i}
-                  href="#"
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="h-10 w-10 rounded-sm border border-border flex items-center justify-center text-foreground/70 hover:border-gold hover:text-gold transition-colors"
-                  aria-label="Rede social"
+                  aria-label={label}
                 >
                   <Icon size={16} />
                 </a>

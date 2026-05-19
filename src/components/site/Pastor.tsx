@@ -13,7 +13,7 @@ export function Pastor() {
               whileHover={{ scale: 1.04 }}
               transition={{ duration: 1.5 }}
               src={pastorImg}
-              alt="Pastor Paulo Rafael Barreto"
+              alt="Pastor Paulo Barreto"
               loading="lazy"
               width={1024}
               height={1280}
@@ -22,7 +22,7 @@ export function Pastor() {
             <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
             <div className="absolute bottom-6 left-6 right-6">
               <div className="text-[10px] uppercase tracking-[0.3em] text-gold">Pastor Sênior</div>
-              <div className="font-display text-3xl font-bold mt-1">Paulo Rafael Barreto</div>
+              <div className="font-display text-3xl font-bold mt-1">Paulo Barreto</div>
             </div>
           </div>
           <div className="absolute -top-6 -right-6 h-32 w-32 border-t border-r border-gold/40 hidden lg:block" />
@@ -38,7 +38,7 @@ export function Pastor() {
 
           <FadeIn delay={0.15}>
             <p className="mt-8 text-foreground/75 leading-relaxed">
-              Pastor Paulo Rafael Barreto lidera a Lagoinha Natal Zona Sul com uma visão clara de discipulado,
+              Pastor Paulo Barreto lidera a Lagoinha Natal Zona Sul com uma visão clara de discipulado,
               comunhão e impacto. Reconhecido pelo seu coração pastoral e pelo zelo na entrega da palavra,
               tem dedicado sua vida a formar discípulos, cuidar de famílias e levantar uma nova geração comprometida com o Reino.
             </p>
@@ -50,7 +50,7 @@ export function Pastor() {
                 “A igreja é o lugar onde pessoas comuns vivem o extraordinário de Deus. Você foi feito para mais.”
               </p>
               <footer className="mt-4 text-xs uppercase tracking-[0.3em] text-muted-foreground">
-                — Pr. Paulo Rafael
+                — Pr. Paulo Barreto
               </footer>
             </blockquote>
           </FadeIn>

@@ -1,35 +1,8 @@
-import { useState } from "react";
 import { motion } from "motion/react";
-import { z } from "zod";
 import { MapPin, Phone, Instagram, Clock, Send } from "lucide-react";
 import { FadeIn, SectionLabel } from "./Section";
-import { toast } from "sonner";
-
-const schema = z.object({
-  name: z.string().trim().min(2, "Informe seu nome").max(100),
-  email: z.string().trim().email("Email inválido").max(255),
-  phone: z.string().trim().min(8, "Telefone inválido").max(20),
-  message: z.string().trim().min(5, "Mensagem muito curta").max(1000),
-});
 
 export function Contato() {
-  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
-  const [loading, setLoading] = useState(false);
-
-  const onSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const result = schema.safeParse(form);
-    if (!result.success) {
-      toast.error(result.error.issues[0]?.message ?? "Verifique os campos");
-      return;
-    }
-    setLoading(true);
-    setTimeout(() => {
-      toast.success("Mensagem enviada! Em breve entraremos em contato.");
-      setForm({ name: "", email: "", phone: "", message: "" });
-      setLoading(false);
-    }, 800);
-  };
 
   return (
     <section id="contato" className="relative py-32 px-6">
@@ -62,8 +35,8 @@ export function Contato() {
               {[
                 { Icon: MapPin, label: "Endereço", value: "Rua Delmiro Gouveia, 17 — Neópolis, Natal/RN" },
                 { Icon: Clock, label: "Cultos", value: "Qui 20h · Dom 10h e 17h" },
-                { Icon: Phone, label: "WhatsApp", value: "(84) 99999-0000", href: "https://wa.me/5584999990000" },
-                { Icon: Instagram, label: "Instagram", value: "@lagoinhanatalzs", href: "https://instagram.com" },
+                { Icon: Phone, label: "WhatsApp", value: "(84) 9455-1786", href: "https://wa.me/message/CTRQ7IYS35TNP1" },
+                { Icon: Instagram, label: "Instagram", value: "@lagoinhanatalzonasul", href: "https://www.instagram.com/lagoinhanatalzonasul/" },
               ].map(({ Icon, label, value, href }) => (
                 <a
                   key={label}
@@ -84,41 +57,27 @@ export function Contato() {
             </div>
           </FadeIn>
 
-          {/* Form */}
+          {/* CTA */}
           <FadeIn delay={0.15}>
-            <form onSubmit={onSubmit} className="glass rounded-md p-8 lg:p-10 space-y-5">
-              <Field
-                label="Nome"
-                value={form.name}
-                onChange={(v) => setForm({ ...form, name: v })}
-              />
-              <Field
-                label="Email"
-                type="email"
-                value={form.email}
-                onChange={(v) => setForm({ ...form, email: v })}
-              />
-              <Field
-                label="Telefone"
-                value={form.phone}
-                onChange={(v) => setForm({ ...form, phone: v })}
-              />
-              <Field
-                label="Mensagem"
-                multiline
-                value={form.message}
-                onChange={(v) => setForm({ ...form, message: v })}
-              />
-              <motion.button
+            <div className="glass rounded-md p-10 lg:p-12 h-full flex flex-col justify-center text-center">
+              <div className="text-[10px] uppercase tracking-[0.3em] text-gold">Faça parte</div>
+              <h3 className="mt-4 font-display text-3xl lg:text-4xl font-bold leading-tight">
+                Dê o próximo passo e <span className="text-gradient-gold italic">torne-se membro</span>.
+              </h3>
+              <p className="mt-4 text-sm text-foreground/70">
+                Preencha o formulário e conecte-se à nossa comunidade.
+              </p>
+              <motion.a
                 whileTap={{ scale: 0.98 }}
-                disabled={loading}
-                type="submit"
-                className="w-full mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-gold py-4 text-xs font-semibold uppercase tracking-[0.3em] text-gold-foreground shadow-glow hover:shadow-[0_0_80px_-5px_var(--gold-glow)] transition-all disabled:opacity-60"
+                href="https://forms.gle/1cAiqTd9fM18UPgHA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-gold py-4 px-8 text-xs font-semibold uppercase tracking-[0.3em] text-gold-foreground shadow-glow hover:shadow-[0_0_80px_-5px_var(--gold-glow)] transition-all"
               >
-                {loading ? "Enviando..." : "Enviar Mensagem"}
+                Seja Membro
                 <Send size={14} />
-              </motion.button>
-            </form>
+              </motion.a>
+            </div>
           </FadeIn>
         </div>
       </div>
@@ -126,30 +85,3 @@ export function Contato() {
   );
 }
 
-function Field({
-  label, value, onChange, type = "text", multiline = false,
-}: {
-  label: string; value: string; onChange: (v: string) => void;
-  type?: string; multiline?: boolean;
-}) {
-  return (
-    <label className="block">
-      <span className="block text-[10px] uppercase tracking-[0.3em] text-gold mb-2">{label}</span>
-      {multiline ? (
-        <textarea
-          rows={5}
-          value={value}
-          onChange={(e) => onChange(e.target.value)}
-          className="w-full bg-transparent border-b border-border focus:border-gold outline-none py-3 text-foreground placeholder:text-muted-foreground resize-none transition-colors"
-        />
-      ) : (
-        <input
-          type={type}
-          value={value}
-          onChange={(e) => onChange(e.target.value)}
-          className="w-full bg-transparent border-b border-border focus:border-gold outline-none py-3 text-foreground placeholder:text-muted-foreground transition-colors"
-        />
-      )}
-    </label>
-  );
-}

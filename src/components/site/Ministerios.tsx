@@ -1,20 +1,15 @@
 import { motion } from "motion/react";
 import {
-  Users, Compass, Sparkles, Rocket, Baby, HandHeart,
-  Flame, Radio, DoorOpen, Music, ArrowRight,
+  Users, Compass, HeartHandshake, Rocket, Baby, Music,
 } from "lucide-react";
 import { FadeIn, SectionLabel } from "./Section";
 
 const MINS = [
-  { icon: Users, name: "GC", desc: "Grupos de Crescimento nas casas." },
-  { icon: Compass, name: "Follow", desc: "Discipulado intencional para novos." },
-  { icon: Sparkles, name: "Gerações", desc: "Adolescentes vivendo o Reino." },
+  { icon: Users, name: "GC", desc: "Grupo de Crescimento." },
+  { icon: Compass, name: "Follow", desc: "“Ide por todo o mundo e pregai o evangelho a toda criatura.” — Marcos 16:15" },
+  { icon: HeartHandshake, name: "Gerações", desc: "O ministério que cuida das famílias da nossa igreja." },
   { icon: Rocket, name: "Rocket", desc: "Jovens com propósito e missão." },
-  { icon: Baby, name: "Lagoinha Kids", desc: "Crianças encontrando Jesus." },
-  { icon: HandHeart, name: "Voluntariado", desc: "Servir é nossa cultura." },
-  { icon: Flame, name: "Intercessão", desc: "Oração que move o invisível." },
-  { icon: Radio, name: "Comunicação", desc: "Levando a mensagem adiante." },
-  { icon: DoorOpen, name: "Recepção", desc: "Cada pessoa é bem-vinda." },
+  { icon: Baby, name: "Kids", desc: "Crianças encontrando Jesus." },
   { icon: Music, name: "Louvor", desc: "Adoração que enche o templo." },
 ];
 
@@ -37,7 +32,7 @@ export function Ministerios() {
           </FadeIn>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
           {MINS.map((m, i) => (
             <FadeIn key={m.name} delay={(i % 5) * 0.06}>
               <motion.div
@@ -57,18 +52,6 @@ export function Ministerios() {
             </FadeIn>
           ))}
         </div>
-
-        <FadeIn delay={0.2} className="mt-24 text-center">
-          <a
-            href="#contato"
-            className="group inline-flex items-center gap-4 rounded-full border border-gold/40 bg-gold/5 px-10 py-5 hover:bg-gold transition-all"
-          >
-            <span className="font-display text-2xl lg:text-3xl font-bold text-gold group-hover:text-gold-foreground">
-              Quero Fazer Parte
-            </span>
-            <ArrowRight className="text-gold group-hover:text-gold-foreground group-hover:translate-x-1 transition-all" />
-          </a>
-        </FadeIn>
       </div>
     </section>
   );

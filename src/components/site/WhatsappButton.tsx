@@ -7,7 +7,7 @@ export function WhatsappButton() {
       initial={{ scale: 0, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ delay: 2, type: "spring", stiffness: 200 }}
-      href="https://wa.me/5584999990000"
+      href="https://wa.me/message/CTRQ7IYS35TNP1"
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Fale conosco no WhatsApp"
