@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { ArrowRight, ChevronDown } from "lucide-react";
 import heroImg from "@/assets/hero.jpg";
+import logo from "@/assets/logo-lagoinha.png";
 
 export function Hero() {
   return (
