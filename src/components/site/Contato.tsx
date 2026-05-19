@@ -85,30 +85,3 @@ export function Contato() {
   );
 }
 
-function Field({
-  label, value, onChange, type = "text", multiline = false,
-}: {
-  label: string; value: string; onChange: (v: string) => void;
-  type?: string; multiline?: boolean;
-}) {
-  return (
-    <label className="block">
-      <span className="block text-[10px] uppercase tracking-[0.3em] text-gold mb-2">{label}</span>
-      {multiline ? (
-        <textarea
-          rows={5}
-          value={value}
-          onChange={(e) => onChange(e.target.value)}
-          className="w-full bg-transparent border-b border-border focus:border-gold outline-none py-3 text-foreground placeholder:text-muted-foreground resize-none transition-colors"
-        />
-      ) : (
-        <input
-          type={type}
-          value={value}
-          onChange={(e) => onChange(e.target.value)}
-          className="w-full bg-transparent border-b border-border focus:border-gold outline-none py-3 text-foreground placeholder:text-muted-foreground transition-colors"
-        />
-      )}
-    </label>
-  );
-}
