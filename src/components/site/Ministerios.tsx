@@ -32,7 +32,7 @@ export function Ministerios() {
           </FadeIn>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
           {MINS.map((m, i) => (
             <FadeIn key={m.name} delay={(i % 5) * 0.06}>
               <motion.div
@@ -52,18 +52,6 @@ export function Ministerios() {
             </FadeIn>
           ))}
         </div>
-
-        <FadeIn delay={0.2} className="mt-24 text-center">
-          <a
-            href="#contato"
-            className="group inline-flex items-center gap-4 rounded-full border border-gold/40 bg-gold/5 px-10 py-5 hover:bg-gold transition-all"
-          >
-            <span className="font-display text-2xl lg:text-3xl font-bold text-gold group-hover:text-gold-foreground">
-              Quero Fazer Parte
-            </span>
-            <ArrowRight className="text-gold group-hover:text-gold-foreground group-hover:translate-x-1 transition-all" />
-          </a>
-        </FadeIn>
       </div>
     </section>
   );
