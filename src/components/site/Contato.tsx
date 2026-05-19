@@ -84,41 +84,27 @@ export function Contato() {
             </div>
           </FadeIn>
 
-          {/* Form */}
+          {/* CTA */}
           <FadeIn delay={0.15}>
-            <form onSubmit={onSubmit} className="glass rounded-md p-8 lg:p-10 space-y-5">
-              <Field
-                label="Nome"
-                value={form.name}
-                onChange={(v) => setForm({ ...form, name: v })}
-              />
-              <Field
-                label="Email"
-                type="email"
-                value={form.email}
-                onChange={(v) => setForm({ ...form, email: v })}
-              />
-              <Field
-                label="Telefone"
-                value={form.phone}
-                onChange={(v) => setForm({ ...form, phone: v })}
-              />
-              <Field
-                label="Mensagem"
-                multiline
-                value={form.message}
-                onChange={(v) => setForm({ ...form, message: v })}
-              />
-              <motion.button
+            <div className="glass rounded-md p-10 lg:p-12 h-full flex flex-col justify-center text-center">
+              <div className="text-[10px] uppercase tracking-[0.3em] text-gold">Faça parte</div>
+              <h3 className="mt-4 font-display text-3xl lg:text-4xl font-bold leading-tight">
+                Dê o próximo passo e <span className="text-gradient-gold italic">torne-se membro</span>.
+              </h3>
+              <p className="mt-4 text-sm text-foreground/70">
+                Preencha o formulário e conecte-se à nossa comunidade.
+              </p>
+              <motion.a
                 whileTap={{ scale: 0.98 }}
-                disabled={loading}
-                type="submit"
-                className="w-full mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-gold py-4 text-xs font-semibold uppercase tracking-[0.3em] text-gold-foreground shadow-glow hover:shadow-[0_0_80px_-5px_var(--gold-glow)] transition-all disabled:opacity-60"
+                href="https://forms.gle/1cAiqTd9fM18UPgHA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 inline-flex items-center justify-center gap-2 rounded-full bg-gold py-4 px-8 text-xs font-semibold uppercase tracking-[0.3em] text-gold-foreground shadow-glow hover:shadow-[0_0_80px_-5px_var(--gold-glow)] transition-all"
               >
-                {loading ? "Enviando..." : "Enviar Mensagem"}
+                Seja Membro
                 <Send size={14} />
-              </motion.button>
-            </form>
+              </motion.a>
+            </div>
           </FadeIn>
         </div>
       </div>
