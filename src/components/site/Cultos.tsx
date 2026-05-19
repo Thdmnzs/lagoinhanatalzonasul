@@ -16,7 +16,7 @@ const CULTOS = [
 const GALLERY = [
   { src: g2, label: "Adoração", span: "md:row-span-2" },
   { src: g1, label: "Louvor", span: "" },
-  { src: g3, label: "Família", span: "" },
+  { src: g3, label: "Comunhão", span: "" },
   { src: g5, label: "Celebração", span: "md:col-span-2" },
   { src: hero, label: "Jovens", span: "" },
   { src: g4, label: "Kids", span: "" },

@@ -56,7 +56,7 @@ export function Hero() {
         >
           LAGOINHA NATAL
           <br />
-          <span className="text-gradient-gold">— ZONA SUL</span>
+          <span className="text-gradient-gold">ZONA SUL</span>
         </motion.h1>
 
         <motion.p
@@ -85,7 +85,9 @@ export function Hero() {
             <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
           </a>
           <a
-            href="#contato"
+            href="https://wa.me/5584994551786"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center justify-center gap-2 rounded-full border border-foreground/20 bg-foreground/5 px-8 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-foreground backdrop-blur-sm hover:bg-foreground/10 transition-all"
           >
             Fale Conosco

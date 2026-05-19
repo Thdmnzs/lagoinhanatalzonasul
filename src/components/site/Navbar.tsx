@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo-lagoinha.png";
 
 const NAV = [
   { label: "Início", href: "#inicio" },
@@ -34,8 +35,8 @@ export function Navbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6">
         <a href="#inicio" className="flex items-center gap-3 group">
           <div className="relative">
-            <div className="h-9 w-9 rounded-sm border border-gold/60 flex items-center justify-center text-gold font-display font-bold text-lg leading-none">
-              L
+            <div className="h-9 w-9 rounded-sm border border-gold/60 overflow-hidden flex items-center justify-center">
+              <img src={logo} alt="Lagoinha Natal Zona Sul" className="h-full w-full object-cover" />
             </div>
             <div className="absolute inset-0 rounded-sm bg-radial-gold opacity-0 group-hover:opacity-100 transition" />
           </div>

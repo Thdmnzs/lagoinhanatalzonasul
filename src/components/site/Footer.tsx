@@ -1,4 +1,5 @@
 import { Instagram, Youtube, Facebook } from "lucide-react";
+import logo from "@/assets/logo-lagoinha.png";
 
 export function Footer() {
   return (
@@ -7,7 +8,7 @@ export function Footer() {
         <div className="grid lg:grid-cols-12 gap-10 mb-16">
           <div className="lg:col-span-5">
             <div className="flex items-center gap-3">
-              <div className="h-10 w-10 rounded-sm border border-gold/60 flex items-center justify-center text-gold font-display font-bold">L</div>
+              <div className="h-10 w-10 rounded-sm border border-gold/60 overflow-hidden flex items-center justify-center"><img src={logo} alt="Lagoinha Natal Zona Sul" className="h-full w-full object-cover" /></div>
               <div>
                 <div className="font-display font-bold tracking-wide uppercase">Lagoinha</div>
                 <div className="text-[10px] uppercase tracking-[0.25em] text-muted-foreground">Natal · Zona Sul</div>
