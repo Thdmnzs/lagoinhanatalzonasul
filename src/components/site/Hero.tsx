@@ -38,14 +38,25 @@ export function Hero() {
           </span>
         </motion.div>
 
+        <motion.img
+          initial={{ opacity: 0, scale: 0.85 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 1.1, delay: 0.3 }}
+          src={logo}
+          alt="Lagoinha Natal Zona Sul"
+          className="mb-6 h-24 w-24 sm:h-28 sm:w-28 object-contain opacity-90"
+        />
+
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.1, delay: 0.4 }}
-          className="font-display font-bold leading-[0.95] tracking-tight text-5xl sm:text-7xl lg:text-[8.5rem]"
+          style={{ fontFamily: "var(--font-brand)" }}
+          className="font-bold uppercase leading-[0.95] tracking-[0.02em] text-4xl sm:text-6xl lg:text-8xl xl:text-[7rem]"
         >
-          Lagoinha <br />
-          <span className="text-gradient-gold italic font-medium">Zona Sul</span>
+          LAGOINHA NATAL
+          <br />
+          <span className="text-gradient-gold">— ZONA SUL</span>
         </motion.h1>
 
         <motion.p
@@ -54,9 +65,9 @@ export function Hero() {
           transition={{ duration: 1, delay: 0.7 }}
           className="mt-8 max-w-2xl text-base sm:text-lg text-foreground/80 font-light leading-relaxed"
         >
-          Uma igreja para pertencer, crescer e viver o propósito de Deus.
+          Grande para servir, pequena para se importar.
           <span className="block mt-2 text-sm uppercase tracking-[0.25em] text-gold/80">
-            Bem-vindo ao novo. Bem-vindo para casa.
+            Bem-vindo para casa.
           </span>
         </motion.p>
 
