@@ -90,23 +90,6 @@ export function About() {
           </FadeIn>
         </div>
 
-        {/* Stats */}
-        <div className="mt-32 grid grid-cols-1 md:grid-cols-3 gap-px bg-border rounded-md overflow-hidden">
-          {[
-            { n: 3500, label: "Famílias alcançadas" },
-            { n: 8000, label: "Pessoas conectadas" },
-            { n: 24, label: "Ministérios ativos" },
-          ].map((s, i) => (
-            <FadeIn key={s.label} delay={i * 0.15} className="bg-card p-10 lg:p-14">
-              <div className="font-display text-5xl lg:text-6xl font-bold text-gradient-gold">
-                <Counter to={s.n} />
-              </div>
-              <div className="mt-3 text-xs uppercase tracking-[0.25em] text-muted-foreground">
-                {s.label}
-              </div>
-            </FadeIn>
-          ))}
-        </div>
       </div>
     </section>
   );
