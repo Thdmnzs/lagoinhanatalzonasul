@@ -1,35 +1,8 @@
-import { useState } from "react";
 import { motion } from "motion/react";
-import { z } from "zod";
 import { MapPin, Phone, Instagram, Clock, Send } from "lucide-react";
 import { FadeIn, SectionLabel } from "./Section";
-import { toast } from "sonner";
-
-const schema = z.object({
-  name: z.string().trim().min(2, "Informe seu nome").max(100),
-  email: z.string().trim().email("Email inválido").max(255),
-  phone: z.string().trim().min(8, "Telefone inválido").max(20),
-  message: z.string().trim().min(5, "Mensagem muito curta").max(1000),
-});
 
 export function Contato() {
-  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
-  const [loading, setLoading] = useState(false);
-
-  const onSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const result = schema.safeParse(form);
-    if (!result.success) {
-      toast.error(result.error.issues[0]?.message ?? "Verifique os campos");
-      return;
-    }
-    setLoading(true);
-    setTimeout(() => {
-      toast.success("Mensagem enviada! Em breve entraremos em contato.");
-      setForm({ name: "", email: "", phone: "", message: "" });
-      setLoading(false);
-    }, 800);
-  };
 
   return (
     <section id="contato" className="relative py-32 px-6">
