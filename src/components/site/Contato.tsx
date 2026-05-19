@@ -62,8 +62,8 @@ export function Contato() {
               {[
                 { Icon: MapPin, label: "Endereço", value: "Rua Delmiro Gouveia, 17 — Neópolis, Natal/RN" },
                 { Icon: Clock, label: "Cultos", value: "Qui 20h · Dom 10h e 17h" },
-                { Icon: Phone, label: "WhatsApp", value: "(84) 99999-0000", href: "https://wa.me/5584999990000" },
-                { Icon: Instagram, label: "Instagram", value: "@lagoinhanatalzs", href: "https://instagram.com" },
+                { Icon: Phone, label: "WhatsApp", value: "(84) 9455-1786", href: "https://wa.me/message/CTRQ7IYS35TNP1" },
+                { Icon: Instagram, label: "Instagram", value: "@lagoinhanatalzonasul", href: "https://www.instagram.com/lagoinhanatalzonasul/" },
               ].map(({ Icon, label, value, href }) => (
                 <a
                   key={label}
