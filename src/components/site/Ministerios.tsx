@@ -23,14 +23,14 @@ export function Ministerios() {
       <div className="relative mx-auto max-w-7xl">
         <div className="grid lg:grid-cols-12 gap-12 mb-20 items-end">
           <FadeIn className="lg:col-span-7">
-            <SectionLabel>Ministérios & GC</SectionLabel>
+            <SectionLabel>Ministérios</SectionLabel>
             <h2 className="mt-6 font-display text-5xl lg:text-7xl font-bold leading-[0.95]">
               Faça parte da nossa <span className="text-gradient-gold italic font-medium">família</span>.
             </h2>
           </FadeIn>
           <FadeIn delay={0.15} className="lg:col-span-5">
             <p className="text-foreground/70 leading-relaxed">
-              Você não nasceu para caminhar sozinho. Conecte-se a um Grupo de Crescimento e a um ministério para viver o propósito de Deus conosco.
+              Você não nasceu para caminhar sozinho. Conecte-se a um ministério e venha viver o propósito de Deus conosco.
             </p>
           </FadeIn>
         </div>
