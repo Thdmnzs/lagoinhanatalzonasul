@@ -1,16 +1,19 @@
 import { motion } from "motion/react";
 import {
-  Users, Compass, HeartHandshake, Rocket, Baby, Music,
+  Rocket, Crown, HandHeart, Baby, Plug, Compass, Music, Sparkles, Shield,
 } from "lucide-react";
 import { FadeIn, SectionLabel } from "./Section";
 
 const MINS = [
-  { icon: Users, name: "GC", desc: "Grupo de Crescimento." },
-  { icon: Compass, name: "Follow", desc: "“Ide por todo o mundo e pregai o evangelho a toda criatura.” — Marcos 16:15" },
-  { icon: HeartHandshake, name: "Gerações", desc: "O ministério que cuida das famílias da nossa igreja." },
-  { icon: Rocket, name: "Rocket", desc: "Jovens com propósito e missão." },
+  { icon: Rocket, name: "Rocket Link", desc: "Adolescentes vivendo o propósito de Deus." },
+  { icon: Crown, name: "Legacy", desc: "Jovens deixando um legado para o Reino." },
+  { icon: HandHeart, name: "Voluntariado", desc: "Servir com alegria é a marca dessa família." },
   { icon: Baby, name: "Kids", desc: "Crianças encontrando Jesus." },
-  { icon: Music, name: "Louvor", desc: "Adoração que enche o templo." },
+  { icon: Plug, name: "Plug", desc: "Conectando novos membros à igreja." },
+  { icon: Compass, name: "Follow", desc: "“Ide por todo o mundo e pregai o evangelho.” — Mc 16:15" },
+  { icon: Music, name: "Music", desc: "Adoração que enche o templo." },
+  { icon: Sparkles, name: "Shine", desc: "Mulheres que brilham para Cristo." },
+  { icon: Shield, name: "Hero", desc: "Homens corajosos servindo a Deus e à família." },
 ];
 
 export function Ministerios() {
@@ -20,14 +23,14 @@ export function Ministerios() {
       <div className="relative mx-auto max-w-7xl">
         <div className="grid lg:grid-cols-12 gap-12 mb-20 items-end">
           <FadeIn className="lg:col-span-7">
-            <SectionLabel>Ministérios & GC</SectionLabel>
+            <SectionLabel>Ministérios</SectionLabel>
             <h2 className="mt-6 font-display text-5xl lg:text-7xl font-bold leading-[0.95]">
               Faça parte da nossa <span className="text-gradient-gold italic font-medium">família</span>.
             </h2>
           </FadeIn>
           <FadeIn delay={0.15} className="lg:col-span-5">
             <p className="text-foreground/70 leading-relaxed">
-              Você não nasceu para caminhar sozinho. Conecte-se a um Grupo de Crescimento e a um ministério para viver o propósito de Deus conosco.
+              Você não nasceu para caminhar sozinho. Conecte-se a um ministério e venha viver o propósito de Deus conosco.
             </p>
           </FadeIn>
         </div>
