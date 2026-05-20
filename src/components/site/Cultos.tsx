@@ -18,7 +18,7 @@ const GALLERY = [
   { src: g1, label: "Louvor", span: "", pos: "object-center" },
   { src: g3, label: "Comunhão", span: "", pos: "object-center" },
   { src: g5, label: "Celebração", span: "md:col-span-2", pos: "object-center" },
-  { src: hero, label: "Jovens", span: "", pos: "object-top" },
+  { src: hero, label: "Jovens", span: "md:row-span-2", pos: "object-top" },
   { src: g4, label: "Kids", span: "", pos: "object-top" },
 ];
 

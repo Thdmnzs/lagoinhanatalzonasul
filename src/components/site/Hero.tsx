@@ -1,18 +1,22 @@
-import { motion } from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
+import { useRef } from "react";
 import { ArrowRight, ChevronDown } from "lucide-react";
-import heroImg from "@/assets/hero.jpg";
+import heroImg from "@/assets/hero-bg.jpg";
 import logo from "@/assets/logo-lagoinha.png";
 
 export function Hero() {
+  const ref = useRef<HTMLElement>(null);
+  const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end start"] });
+  const y = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
+
   return (
-    <section id="inicio" className="relative min-h-screen w-full overflow-hidden grain">
-      <motion.div
-        initial={{ scale: 1.15 }}
-        animate={{ scale: 1 }}
-        transition={{ duration: 8, ease: "easeOut" }}
-        className="absolute inset-0"
-      >
-        <img
+    <section ref={ref} id="inicio" className="relative min-h-screen w-full overflow-hidden grain">
+      <motion.div style={{ y, scale }} className="absolute inset-0 will-change-transform">
+        <motion.img
+          initial={{ scale: 1.15 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 8, ease: "easeOut" }}
           src={heroImg}
           alt="Culto cinematográfico"
           className="h-full w-full object-cover"
@@ -21,9 +25,11 @@ export function Hero() {
         />
       </motion.div>
 
-      {/* Overlays */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background/40 via-background/60 to-background" />
+      {/* Overlays — escuro para contraste */}
+      <div className="absolute inset-0 bg-background/55" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-background/40 to-background" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_0%,var(--background)_85%)]" />
+
 
       <div className="relative z-10 mx-auto flex min-h-screen max-w-6xl flex-col items-center justify-center px-6 text-center">
         <motion.div
