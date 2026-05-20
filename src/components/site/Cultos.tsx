@@ -14,12 +14,12 @@ const CULTOS = [
 ];
 
 const GALLERY = [
-  { src: g2, label: "Adoração", span: "md:row-span-2" },
-  { src: g1, label: "Louvor", span: "" },
-  { src: g3, label: "Comunhão", span: "" },
-  { src: g5, label: "Celebração", span: "md:col-span-2" },
-  { src: hero, label: "Jovens", span: "" },
-  { src: g4, label: "Kids", span: "" },
+  { src: g2, label: "Adoração", span: "md:row-span-2", pos: "object-center" },
+  { src: g1, label: "Louvor", span: "", pos: "object-center" },
+  { src: g3, label: "Comunhão", span: "", pos: "object-center" },
+  { src: g5, label: "Celebração", span: "md:col-span-2", pos: "object-center" },
+  { src: hero, label: "Jovens", span: "", pos: "object-top" },
+  { src: g4, label: "Kids", span: "", pos: "object-top" },
 ];
 
 export function Cultos() {
@@ -76,7 +76,7 @@ export function Cultos() {
                   src={g.src}
                   alt={g.label}
                   loading="lazy"
-                  className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className={`h-full w-full object-cover ${g.pos} transition-transform duration-700 group-hover:scale-110`}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/30 to-transparent" />
                 <div className="absolute bottom-4 left-4 text-xs uppercase tracking-[0.25em] text-gold">
