@@ -13,7 +13,7 @@ export function Contato() {
             Venha nos <span className="text-gradient-gold italic font-medium">visitar</span>.
           </h2>
           <p className="mt-6 text-foreground/70">
-            Estamos te esperando. Bem-vindo para casa.
+            Estamos te esperando!
           </p>
         </FadeIn>
 
