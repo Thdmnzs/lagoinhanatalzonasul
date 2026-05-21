@@ -10,7 +10,7 @@ const MINS = [
   { icon: HandHeart, name: "Voluntariado", desc: "Servir com alegria é a marca dessa família." },
   { icon: Baby, name: "Kids", desc: "Crianças encontrando Jesus." },
   { icon: Plug, name: "Plug", desc: "Conectando novos membros à igreja." },
-  { icon: Compass, name: "Follow", desc: "“Ide por todo o mundo e pregai o evangelho.” — Mc 16:15" },
+  { icon: Compass, name: "Follow", desc: "Time de comunicação da igreja" },
   { icon: Music, name: "Music", desc: "Adoração que enche o templo." },
   { icon: Sparkles, name: "Shine", desc: "Mulheres que brilham para Cristo." },
   { icon: Shield, name: "Hero", desc: "Homens corajosos servindo a Deus e à família." },
