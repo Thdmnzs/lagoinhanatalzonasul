@@ -16,10 +16,10 @@ const CULTOS = [
 const GALLERY = [
   { src: g2, label: "Adoração", span: "md:row-span-2", pos: "object-center" },
   { src: g1, label: "Louvor", span: "", pos: "object-center" },
-  { src: g3, label: "Comunhão", span: "", pos: "object-center" },
+  { src: g4, label: "Kids", span: "", pos: "object-top" },
   { src: hero, label: "Jovens", span: "md:row-span-2", pos: "object-top" },
   { src: g5, label: "Celebração", span: "md:col-span-2", pos: "object-center" },
-  { src: g4, label: "Kids", span: "md:col-span-4", pos: "object-top" },
+  { src: g3, label: "Comunhão", span: "md:col-span-4 md:row-span-2", pos: "object-center" },
 ];
 
 export function Cultos() {
