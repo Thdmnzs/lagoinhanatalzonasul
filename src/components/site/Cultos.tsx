@@ -51,7 +51,7 @@ export function Cultos() {
                   <div className="mt-6 font-display text-3xl font-bold">{c.name}</div>
                   <div className="mt-10 flex items-end justify-between">
                     <div className="font-display text-6xl font-bold text-gradient-gold">{c.time}</div>
-                    <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Presencial</div>
+                    <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Presencial · Online</div>
                   </div>
                   <div className="mt-8 h-px gold-hairline opacity-40 group-hover:opacity-100 transition-opacity" />
                 </div>
