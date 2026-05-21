@@ -37,23 +37,24 @@ export function Contato() {
                 { Icon: Clock, label: "Cultos", value: "Qui 20h · Dom 10h e 17h" },
                 { Icon: Phone, label: "WhatsApp", value: "(84) 99455-1786", href: "https://wa.me/5584994551786" },
                 { Icon: Instagram, label: "Instagram", value: "@lagoinhanatalzonasul", href: "https://www.instagram.com/lagoinhanatalzonasul/" },
-              ].map(({ Icon, label, value, href }) => (
-                <a
-                  key={label}
-                  href={href ?? "#"}
-                  target={href ? "_blank" : undefined}
-                  rel="noopener noreferrer"
-                  className="glass rounded-md p-5 flex items-start gap-4 hover:border-gold/40 transition-colors group"
-                >
-                  <div className="h-10 w-10 rounded-sm border border-gold/40 flex items-center justify-center text-gold shrink-0 group-hover:bg-gold group-hover:text-gold-foreground transition-colors">
-                    <Icon size={16} />
-                  </div>
-                  <div className="min-w-0">
-                    <div className="text-[10px] uppercase tracking-[0.25em] text-gold">{label}</div>
-                    <div className="mt-1 text-sm text-foreground/85 truncate">{value}</div>
-                  </div>
-                </a>
-              ))}
+              ].map(({ Icon, label, value, href }) => {
+                const Comp: any = href ? "a" : "div";
+                return (
+                  <Comp
+                    key={label}
+                    {...(href ? { href, target: "_blank", rel: "noopener noreferrer" } : {})}
+                    className="glass rounded-md p-5 flex items-start gap-4 hover:border-gold/40 transition-colors group"
+                  >
+                    <div className="h-10 w-10 rounded-sm border border-gold/40 flex items-center justify-center text-gold shrink-0 group-hover:bg-gold group-hover:text-gold-foreground transition-colors">
+                      <Icon size={16} />
+                    </div>
+                    <div className="min-w-0">
+                      <div className="text-[10px] uppercase tracking-[0.25em] text-gold">{label}</div>
+                      <div className="mt-1 text-sm text-foreground/85 truncate">{value}</div>
+                    </div>
+                  </Comp>
+                );
+              })}
             </div>
           </FadeIn>
 
