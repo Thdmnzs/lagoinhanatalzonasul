@@ -73,7 +73,7 @@ export function Hero() {
         >
           Grande para servir, pequena para se importar.
           <span className="block mt-2 text-sm uppercase tracking-[0.25em] text-gold/80">
-            Conectando a igreja a distância
+            Bem vindo
           </span>
         </motion.p>
 
