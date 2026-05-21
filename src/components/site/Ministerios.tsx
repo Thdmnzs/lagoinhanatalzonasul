@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import {
-  Rocket, Crown, HandHeart, Baby, Plug, Compass, Music, Sparkles, Shield,
+  Rocket, Crown, HandHeart, Baby, Plug, Compass, Music, Sparkles, Shield, Home,
 } from "lucide-react";
 import { FadeIn, SectionLabel } from "./Section";
 
@@ -14,6 +14,7 @@ const MINS = [
   { icon: Music, name: "Music", desc: "Adoração que enche o templo." },
   { icon: Sparkles, name: "Shine", desc: "Mulheres que brilham para Cristo." },
   { icon: Shield, name: "Hero", desc: "Homens corajosos servindo a Deus e à família." },
+  { icon: Home, name: "Gerações", desc: "Famílias edificadas na fé, unindo todas as gerações." },
 ];
 
 export function Ministerios() {

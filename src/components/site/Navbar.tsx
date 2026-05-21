@@ -60,7 +60,9 @@ export function Navbar() {
         </nav>
 
         <a
-          href="#contato"
+          href="https://www.google.com/maps/place/R.+Delmiro+Gouveia,+17+-+Ne%C3%B3polis,+Natal+-+RN,+59086-010/@-5.8623741,-35.205896,17z/"
+          target="_blank"
+          rel="noopener noreferrer"
           className="hidden lg:inline-flex items-center gap-2 rounded-full border border-gold/40 bg-gold/5 px-5 py-2 text-xs uppercase tracking-[0.2em] text-gold hover:bg-gold hover:text-gold-foreground transition-all"
         >
           Visite-nos

@@ -84,7 +84,9 @@ export function Hero() {
           className="mt-12 flex flex-col sm:flex-row gap-4"
         >
           <a
-            href="#contato"
+            href="https://www.google.com/maps/place/R.+Delmiro+Gouveia,+17+-+Ne%C3%B3polis,+Natal+-+RN,+59086-010/@-5.8623741,-35.205896,17z/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="group inline-flex items-center justify-center gap-2 rounded-full bg-gold px-8 py-4 text-xs font-semibold uppercase tracking-[0.25em] text-gold-foreground shadow-glow hover:shadow-[0_0_80px_-5px_var(--gold-glow)] transition-all"
           >
             Visite-nos
@@ -107,7 +109,7 @@ export function Hero() {
         transition={{ delay: 1.5, duration: 1 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-gold/70"
       >
-        <span className="text-[10px] uppercase tracking-[0.3em]">Scroll</span>
+        <span className="text-[10px] uppercase tracking-[0.3em]">Deslize</span>
         <motion.div
           animate={{ y: [0, 8, 0] }}
           transition={{ duration: 2, repeat: Infinity }}

@@ -17,9 +17,9 @@ const GALLERY = [
   { src: g2, label: "Adoração", span: "md:row-span-2", pos: "object-center" },
   { src: g1, label: "Louvor", span: "", pos: "object-center" },
   { src: g3, label: "Comunhão", span: "", pos: "object-center" },
-  { src: g5, label: "Celebração", span: "md:col-span-2", pos: "object-center" },
   { src: hero, label: "Jovens", span: "md:row-span-2", pos: "object-top" },
-  { src: g4, label: "Kids", span: "", pos: "object-top" },
+  { src: g5, label: "Celebração", span: "md:col-span-2", pos: "object-center" },
+  { src: g4, label: "Kids", span: "md:col-span-4", pos: "object-top" },
 ];
 
 export function Cultos() {
@@ -51,7 +51,7 @@ export function Cultos() {
                   <div className="mt-6 font-display text-3xl font-bold">{c.name}</div>
                   <div className="mt-10 flex items-end justify-between">
                     <div className="font-display text-6xl font-bold text-gradient-gold">{c.time}</div>
-                    <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Presencial</div>
+                    <div className="text-xs uppercase tracking-[0.25em] text-muted-foreground">Presencial · Online</div>
                   </div>
                   <div className="mt-8 h-px gold-hairline opacity-40 group-hover:opacity-100 transition-opacity" />
                 </div>
@@ -59,6 +59,17 @@ export function Cultos() {
             </FadeIn>
           ))}
         </div>
+
+        <FadeIn className="mt-12 flex justify-center">
+          <a
+            href="https://www.youtube.com/@LagoinhaNatalZonaSul"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 rounded-full border border-gold/40 bg-gold/5 px-8 py-4 text-xs font-semibold uppercase tracking-[0.3em] text-gold hover:bg-gold hover:text-gold-foreground transition-all"
+          >
+            Assista no YouTube
+          </a>
+        </FadeIn>
 
         {/* Gallery */}
         <FadeIn className="mt-32 text-center">
