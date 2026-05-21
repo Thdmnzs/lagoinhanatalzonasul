@@ -60,6 +60,17 @@ export function Cultos() {
           ))}
         </div>
 
+        <FadeIn className="mt-12 flex justify-center">
+          <a
+            href="https://www.youtube.com/@LagoinhaNatalZonaSul"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 rounded-full border border-gold/40 bg-gold/5 px-8 py-4 text-xs font-semibold uppercase tracking-[0.3em] text-gold hover:bg-gold hover:text-gold-foreground transition-all"
+          >
+            Assista no YouTube
+          </a>
+        </FadeIn>
+
         {/* Gallery */}
         <FadeIn className="mt-32 text-center">
           <SectionLabel>Momentos</SectionLabel>
