@@ -1,23 +1,14 @@
 import { motion } from "motion/react";
-import {
-  Rocket, Crown, HandHeart, Baby, Plug, Compass, Music, Sparkles, Shield, Home,
-} from "lucide-react";
+import { useState } from "react";
 import { FadeIn, SectionLabel } from "./Section";
-
-const MINS = [
-  { icon: Rocket, name: "Rocket & Link", desc: "Adolescentes vivendo o propósito de Deus." },
-  { icon: Crown, name: "Legacy", desc: "Jovens deixando um legado para o Reino." },
-  { icon: HandHeart, name: "Voluntariado", desc: "Servir com alegria é a marca dessa família." },
-  { icon: Baby, name: "Kids", desc: "Crianças encontrando Jesus." },
-  { icon: Plug, name: "Plug", desc: "Conectando novos membros à igreja." },
-  { icon: Compass, name: "Follow", desc: "Time de comunicação da igreja" },
-  { icon: Music, name: "Music", desc: "Adoração que enche o templo." },
-  { icon: Sparkles, name: "Shine", desc: "Mulheres que brilham para Cristo." },
-  { icon: Shield, name: "Hero", desc: "Homens corajosos servindo a Deus e à família." },
-  { icon: Home, name: "Gerações", desc: "Famílias edificadas na fé, unindo todas as gerações." },
-];
+import { useMinistries, type Ministry } from "@/hooks/useMinistries";
+import { getIcon } from "@/lib/iconMap";
+import { LeadersModal } from "./LeadersModal";
 
 export function Ministerios() {
+  const { data: ministries, isLoading } = useMinistries({ activeOnly: true });
+  const [selected, setSelected] = useState<Ministry | null>(null);
+
   return (
     <section id="ministerios" className="relative py-32 px-6">
       <div className="absolute top-1/2 right-0 h-[500px] w-[500px] rounded-full bg-gold/10 blur-[140px]" />
@@ -36,27 +27,44 @@ export function Ministerios() {
           </FadeIn>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-          {MINS.map((m, i) => (
-            <FadeIn key={m.name} delay={(i % 5) * 0.06}>
-              <motion.div
-                whileHover={{ y: -4 }}
-                className="group glass rounded-md p-6 h-full flex flex-col items-start gap-4 cursor-pointer hover:border-gold/40 transition-colors"
-              >
-                <div className="relative">
-                  <div className="h-11 w-11 rounded-sm border border-gold/40 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-gold-foreground transition-colors">
-                    <m.icon size={18} />
-                  </div>
-                </div>
-                <div>
-                  <div className="font-display font-bold text-lg">{m.name}</div>
-                  <div className="mt-1 text-xs text-muted-foreground leading-relaxed">{m.desc}</div>
-                </div>
-              </motion.div>
-            </FadeIn>
-          ))}
-        </div>
+        {isLoading ? (
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+            {Array.from({ length: 6 }).map((_, i) => (
+              <div key={i} className="glass rounded-md p-6 h-32 animate-pulse" />
+            ))}
+          </div>
+        ) : (
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+            {ministries?.map((m, i) => {
+              const Icon = getIcon(m.icon);
+              return (
+                <FadeIn key={m.id} delay={(i % 5) * 0.06}>
+                  <motion.button
+                    whileHover={{ y: -4 }}
+                    onClick={() => setSelected(m)}
+                    className="group glass rounded-md p-6 h-full w-full text-left flex flex-col items-start gap-4 cursor-pointer hover:border-gold/40 transition-colors"
+                  >
+                    <div className="h-11 w-11 rounded-sm border border-gold/40 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-gold-foreground transition-colors">
+                      <Icon size={18} />
+                    </div>
+                    <div>
+                      <div className="font-display font-bold text-lg">{m.name}</div>
+                      {m.description && <div className="mt-1 text-xs text-muted-foreground leading-relaxed">{m.description}</div>}
+                    </div>
+                  </motion.button>
+                </FadeIn>
+              );
+            })}
+          </div>
+        )}
       </div>
+
+      <LeadersModal
+        ministryId={selected?.id ?? null}
+        ministryName={selected?.name ?? ""}
+        open={!!selected}
+        onOpenChange={(o) => !o && setSelected(null)}
+      />
     </section>
   );
 }
