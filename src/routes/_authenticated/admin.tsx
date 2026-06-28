@@ -144,7 +144,7 @@ function MinistriesAdmin() {
         open={open}
         onOpenChange={setOpen}
         initial={editing}
-        onSubmit={async (values) => {
+        onSubmit={async (values: any) => {
           if (editing) await update.mutateAsync({ id: editing.id, patch: values });
           else await create.mutateAsync({ ...values, order_index: (ministries?.length ?? 0) + 1 });
           toast.success("Salvo!");
