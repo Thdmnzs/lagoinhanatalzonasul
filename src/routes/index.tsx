@@ -34,6 +34,7 @@ function Index() {
       <About />
       <Cultos />
       <Ministerios />
+      <LeadersSection />
       <Pastor />
       <Contato />
       <Footer />
