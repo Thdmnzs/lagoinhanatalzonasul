@@ -1,8 +1,10 @@
+import { useState } from "react";
 import { motion } from "motion/react";
 import {
   Rocket, Crown, HandHeart, Baby, Plug, Compass, Music, Sparkles, Shield, Home,
 } from "lucide-react";
 import { FadeIn, SectionLabel } from "./Section";
+import { selectMinistry } from "./LeadersSection";
 
 const MINS = [
   { icon: Rocket, name: "Rocket & Link", desc: "Adolescentes vivendo o propósito de Deus." },
