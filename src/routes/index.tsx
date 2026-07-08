@@ -6,7 +6,7 @@ import { About } from "@/components/site/About";
 import { Cultos } from "@/components/site/Cultos";
 import { Ministerios } from "@/components/site/Ministerios";
 import { LeadersSection } from "@/components/site/LeadersSection";
-import { MinistrySelectionProvider } from "@/components/site/ministrySelection";
+
 
 import { Pastor } from "@/components/site/Pastor";
 import { Contato } from "@/components/site/Contato";
@@ -35,10 +35,9 @@ function Index() {
       <Hero />
       <About />
       <Cultos />
-      <MinistrySelectionProvider>
-        <Ministerios />
-        <LeadersSection />
-      </MinistrySelectionProvider>
+      <Ministerios />
+      <LeadersSection />
+
       <Pastor />
       <Contato />
       <Footer />
