@@ -14,7 +14,7 @@ export function LeadersSection() {
         <div className="mt-6 mb-14">
           <h2 className="font-display text-4xl lg:text-6xl font-bold leading-[0.95]">
             Líderes do{" "}
-            <span className="text-gradient-gold italic font-medium">Ministério</span>
+            <span className="text-gradient-gold font-medium">Ministério</span>
           </h2>
           <p className="mt-4 text-foreground/70 leading-relaxed max-w-xl">
             Conheça quem lidera cada ministério. Deslize para o lado para ver todos.

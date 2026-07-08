@@ -48,7 +48,7 @@ export function About() {
           <FadeIn className="lg:col-span-5">
             <SectionLabel>Quem Somos</SectionLabel>
             <h2 className="mt-6 font-display text-5xl lg:text-7xl font-bold leading-[0.95]">
-              Uma igreja viva, <span className="text-gradient-gold italic font-medium">avivada</span> e cheia de propósito.
+              Uma igreja viva, <span className="text-gradient-gold font-medium">avivada</span> e cheia de propósito.
             </h2>
             <p className="mt-8 text-foreground/70 leading-relaxed">
               A Lagoinha Natal Zona Sul é uma comunidade cristã evangélica localizada em Natal, Rio Grande do Norte.

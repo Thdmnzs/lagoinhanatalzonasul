@@ -32,7 +32,7 @@ export function Pastor() {
           <FadeIn>
             <SectionLabel>Nossa Liderança</SectionLabel>
             <h2 className="mt-6 font-display text-5xl lg:text-6xl font-bold leading-[1]">
-              Um coração <span className="text-gradient-gold italic font-medium">pastoral</span> para servir esta geração.
+              Um coração <span className="text-gradient-gold font-medium">pastoral</span> para servir esta geração.
             </h2>
           </FadeIn>
 
@@ -46,7 +46,7 @@ export function Pastor() {
 
           <FadeIn delay={0.3}>
             <blockquote className="mt-10 border-l-2 border-gold pl-6">
-              <p className="font-display italic text-2xl lg:text-3xl leading-snug">
+              <p className="font-display text-2xl lg:text-3xl leading-snug">
                 “A igreja é o lugar onde pessoas comuns vivem o extraordinário de Deus. Você foi feito para mais.”
               </p>
               <footer className="mt-4 text-xs uppercase tracking-[0.3em] text-muted-foreground">
