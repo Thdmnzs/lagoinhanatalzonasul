@@ -16,7 +16,7 @@ export const LEADER_CARDS: LeaderCardData[] = [
   {
     id: "pastor-senior",
     ministries: ["Pastor Sênior"],
-    people: [{ name: "Paulo Barreto", phone: "558487470020" }],
+    people: [{ name: "Paulo Barreto", phone: "5584987470020" }],
   },
   {
     id: "shine",
