@@ -35,10 +35,9 @@ function Index() {
       <Hero />
       <About />
       <Cultos />
-      <MinistrySelectionProvider>
-        <Ministerios />
-        <LeadersSection />
-      </MinistrySelectionProvider>
+      <Ministerios />
+      <LeadersSection />
+
       <Pastor />
       <Contato />
       <Footer />
