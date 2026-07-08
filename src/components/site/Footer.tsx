@@ -15,7 +15,7 @@ export function Footer() {
               </div>
             </div>
             <p className="mt-6 font-display text-3xl lg:text-4xl font-bold leading-tight max-w-md">
-              <span className="text-gradient-gold italic">Grande para servir</span>, pequena para se importar.
+              <span className="text-gradient-gold">Grande para servir</span>, pequena para se importar.
             </p>
           </div>
 

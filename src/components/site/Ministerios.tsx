@@ -30,7 +30,7 @@ export function Ministerios() {
           <FadeIn className="lg:col-span-7">
             <SectionLabel>Ministérios</SectionLabel>
             <h2 className="mt-6 font-display text-5xl lg:text-7xl font-bold leading-[0.95]">
-              Faça parte da nossa <span className="text-gradient-gold italic font-medium">família</span>.
+              Faça parte da nossa <span className="text-gradient-gold font-medium">família</span>.
             </h2>
           </FadeIn>
           <FadeIn delay={0.15} className="lg:col-span-5">

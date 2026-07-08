@@ -10,7 +10,7 @@ export function Contato() {
         <FadeIn className="text-center max-w-3xl mx-auto mb-20">
           <div className="flex justify-center"><SectionLabel>Localização & Contato</SectionLabel></div>
           <h2 className="mt-6 font-display text-5xl lg:text-7xl font-bold leading-[0.95]">
-            Venha nos <span className="text-gradient-gold italic font-medium">visitar</span>.
+            Venha nos <span className="text-gradient-gold font-medium">visitar</span>.
           </h2>
           <p className="mt-6 text-foreground/70">
             Estamos te esperando. Bem-vindo para casa.
@@ -63,7 +63,7 @@ export function Contato() {
             <div className="glass rounded-md p-10 lg:p-12 h-full flex flex-col justify-center text-center">
               <div className="text-[10px] uppercase tracking-[0.3em] text-gold">Faça parte</div>
               <h3 className="mt-4 font-display text-3xl lg:text-4xl font-bold leading-tight">
-                Dê o próximo passo e <span className="text-gradient-gold italic">torne-se membro</span>.
+                Dê o próximo passo e <span className="text-gradient-gold">torne-se membro</span>.
               </h3>
               <p className="mt-4 text-sm text-foreground/70">
                 Preencha o formulário e conecte-se à nossa comunidade.

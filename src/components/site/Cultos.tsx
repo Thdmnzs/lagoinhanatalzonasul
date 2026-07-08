@@ -30,7 +30,7 @@ export function Cultos() {
         <FadeIn className="text-center max-w-3xl mx-auto">
           <div className="flex justify-center"><SectionLabel>Nossos Cultos</SectionLabel></div>
           <h2 className="mt-6 font-display text-5xl lg:text-7xl font-bold leading-[0.95]">
-            Uma experiência que <span className="text-gradient-gold italic font-medium">transforma</span>.
+            Uma experiência que <span className="text-gradient-gold font-medium">transforma</span>.
           </h2>
           <p className="mt-6 text-foreground/70">
             Encontros marcantes de adoração, palavra e comunhão. Venha viver a presença de Deus conosco.
@@ -75,7 +75,7 @@ export function Cultos() {
         <FadeIn className="mt-32 text-center">
           <SectionLabel>Momentos</SectionLabel>
           <h3 className="mt-4 font-display text-3xl lg:text-5xl font-bold">
-            A vida da nossa <span className="text-gradient-gold italic">comunidade</span>
+            A vida da nossa <span className="text-gradient-gold">comunidade</span>
           </h3>
         </FadeIn>
 
