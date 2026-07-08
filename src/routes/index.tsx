@@ -35,7 +35,10 @@ function Index() {
       <Hero />
       <About />
       <Cultos />
-      <Ministerios />
+      <MinistrySelectionProvider>
+        <Ministerios />
+        <LeadersSection />
+      </MinistrySelectionProvider>
       <Pastor />
       <Contato />
       <Footer />
@@ -43,4 +46,5 @@ function Index() {
       <Toaster theme="dark" position="top-center" />
     </main>
   );
+
 }
