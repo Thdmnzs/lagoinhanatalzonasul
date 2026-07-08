@@ -25,7 +25,9 @@ export function LeaderCard({
     card.people.length === 2
       ? `${card.people[0].name.split(" ")[0]} e ${card.people[1].name.split(" ")[0]}`
       : card.people[0].name;
-  const ministriesLine = card.ministries.length > 1
+  const ministriesLine = card.id === "pastor-senior"
+    ? card.ministries[0].toUpperCase()
+    : card.ministries.length > 1
     ? `Líder de ${card.ministries.join(" · ")}`
     : card.people.length > 1
     ? `Líderes do ${card.ministries[0]}`
