@@ -7,8 +7,8 @@ const NAV = [
   { label: "Início", href: "#inicio" },
   { label: "Sobre", href: "#sobre" },
   { label: "Cultos", href: "#cultos" },
-  { label: "Pastor", href: "#pastor" },
   { label: "Ministérios", href: "#ministerios" },
+  { label: "Pastor", href: "#pastor" },
   { label: "Contato", href: "#contato" },
 ];
 
