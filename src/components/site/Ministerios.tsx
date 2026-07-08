@@ -3,6 +3,8 @@ import {
   Rocket, Crown, HandHeart, Baby, Plug, Compass, Music, Sparkles, Shield, Home,
 } from "lucide-react";
 import { FadeIn, SectionLabel } from "./Section";
+import { useMinistrySelection } from "./ministrySelection";
+
 
 const MINS = [
   { icon: Rocket, name: "Rocket Link", desc: "Adolescentes vivendo o propósito de Deus." },
@@ -18,6 +20,17 @@ const MINS = [
 ];
 
 export function Ministerios() {
+  const { selected, setSelected } = useMinistrySelection();
+
+  const handleSelect = (name: string) => {
+    setSelected(name);
+    // scroll suave até a seção de líderes
+    requestAnimationFrame(() => {
+      const el = document.getElementById("lideres");
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  };
+
   return (
     <section id="ministerios" className="relative py-32 px-6">
       <div className="absolute top-1/2 right-0 h-[500px] w-[500px] rounded-full bg-gold/10 blur-[140px]" />
@@ -37,24 +50,42 @@ export function Ministerios() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
-          {MINS.map((m, i) => (
-            <FadeIn key={m.name} delay={(i % 5) * 0.06}>
-              <motion.div
-                whileHover={{ y: -4 }}
-                className="group glass rounded-md p-6 h-full flex flex-col items-start gap-4 cursor-pointer hover:border-gold/40 transition-colors"
-              >
-                <div className="relative">
-                  <div className="h-11 w-11 rounded-sm border border-gold/40 flex items-center justify-center text-gold group-hover:bg-gold group-hover:text-gold-foreground transition-colors">
-                    <m.icon size={18} />
+          {MINS.map((m, i) => {
+            const isActive = selected === m.name;
+            return (
+              <FadeIn key={m.name} delay={(i % 5) * 0.06}>
+                <motion.button
+                  type="button"
+                  onClick={() => handleSelect(m.name)}
+                  whileHover={{ y: -4 }}
+                  animate={{ scale: isActive ? 1.03 : 1 }}
+                  transition={{ duration: 0.25, ease: [0.22, 1, 0.36, 1] }}
+                  className={`group glass rounded-md p-6 h-full w-full text-left flex flex-col items-start gap-4 cursor-pointer transition-colors ${
+                    isActive
+                      ? "border-gold/60 shadow-glow"
+                      : "hover:border-gold/40"
+                  }`}
+                >
+                  <div className="relative">
+                    <div
+                      className={`h-11 w-11 rounded-sm border border-gold/40 flex items-center justify-center transition-colors ${
+                        isActive
+                          ? "bg-gold text-gold-foreground"
+                          : "text-gold group-hover:bg-gold group-hover:text-gold-foreground"
+                      }`}
+                    >
+                      <m.icon size={18} />
+                    </div>
                   </div>
-                </div>
-                <div>
-                  <div className="font-display font-bold text-lg">{m.name}</div>
-                  <div className="mt-1 text-xs text-muted-foreground leading-relaxed">{m.desc}</div>
-                </div>
-              </motion.div>
-            </FadeIn>
-          ))}
+                  <div>
+                    <div className="font-display font-bold text-lg">{m.name}</div>
+                    <div className="mt-1 text-xs text-muted-foreground leading-relaxed">{m.desc}</div>
+                  </div>
+                </motion.button>
+              </FadeIn>
+            );
+          })}
+
         </div>
       </div>
     </section>
