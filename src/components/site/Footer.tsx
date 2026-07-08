@@ -1,4 +1,4 @@
-import { Instagram, Youtube, Facebook } from "lucide-react";
+import { Instagram, Youtube } from "lucide-react";
 import logo from "@/assets/logo-lagoinha.png";
 
 export function Footer() {
@@ -22,7 +22,7 @@ export function Footer() {
           <div className="lg:col-span-3">
             <div className="text-[10px] uppercase tracking-[0.3em] text-gold mb-4">Navegue</div>
             <ul className="space-y-2 text-sm text-foreground/70">
-              {["Início", "Sobre", "Cultos", "Pastor", "Ministérios", "Contato"].map((l) => (
+              {["Início", "Sobre", "Cultos", "Ministérios", "Pastor", "Contato"].map((l) => (
                 <li key={l}>
                   <a href={`#${l.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "")}`} className="hover:text-gold transition-colors">{l}</a>
                 </li>
@@ -40,7 +40,6 @@ export function Footer() {
               {[
                 { Icon: Instagram, href: "https://www.instagram.com/lagoinhanatalzonasul/", label: "Instagram" },
                 { Icon: Youtube, href: "https://www.youtube.com/@LagoinhaNatalZonaSul", label: "YouTube" },
-                { Icon: Facebook, href: "#", label: "Facebook" },
               ].map(({ Icon, href, label }) => (
                 <a
                   key={label}
