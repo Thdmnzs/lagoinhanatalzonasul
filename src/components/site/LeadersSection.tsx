@@ -1,14 +1,8 @@
-import { useMemo } from "react";
 import { FadeIn, SectionLabel } from "./Section";
 import { LeadersCarousel } from "./LeadersCarousel";
-import { LEADERS_BY_MINISTRY, OTHER_LEADERS, type Leader } from "@/data/leaders";
+import { LEADER_CARDS } from "@/data/leaders";
 
 export function LeadersSection() {
-  const leaders = useMemo<Leader[]>(() => {
-    const fromMinistries = Object.values(LEADERS_BY_MINISTRY).flat();
-    return [...OTHER_LEADERS, ...fromMinistries];
-  }, []);
-
   return (
     <section id="lideres" className="relative py-32 px-6">
       <div className="absolute top-1/3 left-0 h-[400px] w-[400px] rounded-full bg-gold/10 blur-[140px]" />
@@ -27,7 +21,7 @@ export function LeadersSection() {
           </p>
         </div>
 
-        <LeadersCarousel leaders={leaders} />
+        <LeadersCarousel cards={LEADER_CARDS} />
       </div>
     </section>
   );
