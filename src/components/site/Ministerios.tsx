@@ -3,7 +3,7 @@ import {
   Rocket, Crown, HandHeart, Baby, Plug, Compass, Music, Sparkles, Shield, Home,
 } from "lucide-react";
 import { FadeIn, SectionLabel } from "./Section";
-import { useMinistrySelection } from "./ministrySelection";
+
 
 
 const MINS = [
@@ -20,16 +20,7 @@ const MINS = [
 ];
 
 export function Ministerios() {
-  const { selected, setSelected } = useMinistrySelection();
 
-  const handleSelect = (name: string) => {
-    setSelected(name);
-    // scroll suave até a seção de líderes
-    requestAnimationFrame(() => {
-      const el = document.getElementById("lideres");
-      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-    });
-  };
 
   return (
     <section id="ministerios" className="relative py-32 px-6">
