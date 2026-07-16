@@ -19,13 +19,13 @@ export function Hero() {
           src={heroImg}
           alt="Culto cinematográfico"
           layout="fullWidth"
-          width={1920}
-          height={1080}
+          aspectRatio={1920 / 1080}
           priority
           background="auto"
           className="h-full w-full object-cover"
         />
       </motion.div>
+
 
 
       {/* Overlays — escuro para contraste */}
