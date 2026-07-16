@@ -7,7 +7,7 @@ import { FadeIn, SectionLabel } from "./Section";
 
 
 const MINS = [
-  { icon: Rocket, name: "Rocket Link", desc: "Adolescentes vivendo o propósito de Deus." },
+  { icon: Rocket, name: "Rocket & Link", desc: "Adolescentes vivendo o propósito de Deus." },
   { icon: Crown, name: "Legacy", desc: "Jovens deixando um legado para o Reino." },
   { icon: HandHeart, name: "Voluntariado", desc: "Servir com alegria é a marca dessa família." },
   { icon: Baby, name: "Kids", desc: "Crianças encontrando Jesus." },
