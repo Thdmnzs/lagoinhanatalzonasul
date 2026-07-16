@@ -85,13 +85,16 @@ export function Cultos() {
           {GALLERY.map((g, i) => (
             <FadeIn key={i} delay={i * 0.06} className={g.span}>
               <div className="group relative h-full w-full overflow-hidden rounded-sm">
-                <img
+                <Image
                   src={g.src}
                   alt={g.label}
-                  loading="lazy"
-                  decoding="async"
+                  layout="fullWidth"
+                  aspectRatio={1}
+                  sizes="(min-width: 768px) 25vw, 50vw"
+                  background="auto"
                   className={`h-full w-full object-cover ${g.pos} transition-transform duration-700 group-hover:scale-110`}
                 />
+
 
                 <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/30 to-transparent" />
                 <div className="absolute bottom-4 left-4 text-xs uppercase tracking-[0.25em] text-gold">
