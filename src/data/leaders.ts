@@ -1,6 +1,7 @@
 export type LeaderPerson = {
   name: string;
   phone: string;
+  photo?: string;
 };
 
 export type LeaderCardData = {
@@ -9,6 +10,14 @@ export type LeaderCardData = {
   people: LeaderPerson[];
 };
 
+import pauloPhoto from "@/assets/leaders/paulo.png.asset.json";
+import auriPhoto from "@/assets/leaders/auri.png.asset.json";
+import ameliaPhoto from "@/assets/leaders/amelia.png.asset.json";
+import ronaldyPhoto from "@/assets/leaders/ronaldy.png.asset.json";
+import kdjaPhoto from "@/assets/leaders/kdja.png.asset.json";
+import myllaPhoto from "@/assets/leaders/mylla.png.asset.json";
+import erikaPhoto from "@/assets/leaders/erika.png.asset.json";
+
 // Cards já unificados:
 // - Ministério com 2 líderes  → 1 card com ambos.
 // - Mesma pessoa em 2 ministérios → 1 card com os dois ministérios.
@@ -16,12 +25,12 @@ export const LEADER_CARDS: LeaderCardData[] = [
   {
     id: "pastor-senior",
     ministries: ["Pastor Sênior"],
-    people: [{ name: "Pr. Paulo Barreto", phone: "5584987470020" }],
+    people: [{ name: "Pr. Paulo Barreto", phone: "5584987470020", photo: pauloPhoto.url }],
   },
   {
     id: "shine",
     ministries: ["Shine"],
-    people: [{ name: "Pra. Auri Barreto", phone: "5584991202056" }],
+    people: [{ name: "Pra. Auri Barreto", phone: "5584991202056", photo: auriPhoto.url }],
   },
   {
     id: "voluntariado",
@@ -47,7 +56,7 @@ export const LEADER_CARDS: LeaderCardData[] = [
   {
     id: "grupo-crescimento",
     ministries: ["Grupo de Crescimento"],
-    people: [{ name: "Amélia Rodrigues", phone: "5584988600242" }],
+    people: [{ name: "Amélia Rodrigues", phone: "5584988600242", photo: ameliaPhoto.url }],
   },
   {
     id: "follow",
@@ -60,7 +69,7 @@ export const LEADER_CARDS: LeaderCardData[] = [
   {
     id: "music",
     ministries: ["Music"],
-    people: [{ name: "Ronaldy", phone: "558491926404" }],
+    people: [{ name: "Ronaldy", phone: "558491926404", photo: ronaldyPhoto.url }],
   },
   {
     id: "legacy",
@@ -73,14 +82,14 @@ export const LEADER_CARDS: LeaderCardData[] = [
   {
     id: "link",
     ministries: ["Link"],
-    people: [{ name: "Kdja Laurentina", phone: "5584999296408" }],
+    people: [{ name: "Kdja Laurentina", phone: "5584999296408", photo: kdjaPhoto.url }],
   },
   {
     id: "kids",
     ministries: ["Kids"],
     people: [
-      { name: "Mylla", phone: "5584999322890" },
-      { name: "Erika", phone: "5584994097650" },
+      { name: "Mylla", phone: "5584999322890", photo: myllaPhoto.url },
+      { name: "Erika", phone: "5584994097650", photo: erikaPhoto.url },
     ],
   },
   {
