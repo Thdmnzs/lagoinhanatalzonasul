@@ -82,14 +82,14 @@ export function LeadersCarousel({ cards }: { cards: LeaderCardData[] }) {
           <button
             aria-label="Anterior"
             onClick={() => go(-1)}
-            className="flex absolute left-2 md:left-0 top-1/2 -translate-y-1/2 h-11 w-11 items-center justify-center rounded-full border border-gold/40 bg-background/70 backdrop-blur text-gold hover:bg-gold hover:text-gold-foreground transition-colors z-10"
+            className="flex absolute left-2 md:left-0 top-[260px] -translate-y-1/2 h-11 w-11 items-center justify-center rounded-full border border-gold/40 bg-background/70 backdrop-blur text-gold hover:bg-gold hover:text-gold-foreground transition-colors z-10"
           >
             <ChevronLeft size={20} />
           </button>
           <button
             aria-label="Próximo"
             onClick={() => go(1)}
-            className="flex absolute right-2 md:right-0 top-1/2 -translate-y-1/2 h-11 w-11 items-center justify-center rounded-full border border-gold/40 bg-background/70 backdrop-blur text-gold hover:bg-gold hover:text-gold-foreground transition-colors z-10"
+            className="flex absolute right-2 md:right-0 top-[260px] -translate-y-1/2 h-11 w-11 items-center justify-center rounded-full border border-gold/40 bg-background/70 backdrop-blur text-gold hover:bg-gold hover:text-gold-foreground transition-colors z-10"
           >
             <ChevronRight size={20} />
           </button>
