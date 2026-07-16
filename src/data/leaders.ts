@@ -107,12 +107,12 @@ export const LEADER_CARDS: LeaderCardData[] = [
   {
     id: "crie-adm",
     ministries: ["Crie", "Administrador Operacional"],
-    people: [{ name: "Gerson Gonçalves", phone: "5511998759720" }],
+    people: [{ name: "Gerson Gonçalves", phone: "5511998759720", photo: gersonPhoto.url }],
   },
   {
     id: "hero",
     ministries: ["Hero"],
-    people: [{ name: "Marcio Bueno", phone: "5584981277292" }],
+    people: [{ name: "Marcio Bueno", phone: "5584981277292", photo: marcioPhoto.url }],
   },
 ];
 
