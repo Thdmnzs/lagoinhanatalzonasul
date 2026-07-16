@@ -69,7 +69,7 @@ export const LEADER_CARDS: LeaderCardData[] = [
   {
     id: "music",
     ministries: ["Music"],
-    people: [{ name: "Ronaldy", phone: "558491926404" }],
+    people: [{ name: "Ronaldy", phone: "558491926404", photo: ronaldyPhoto.url }],
   },
   {
     id: "legacy",
