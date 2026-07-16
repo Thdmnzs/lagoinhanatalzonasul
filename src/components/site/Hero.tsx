@@ -15,20 +15,18 @@ export function Hero() {
   return (
     <section ref={ref} id="inicio" className="relative min-h-screen w-full overflow-hidden grain">
       <motion.div style={{ y, scale }} className="absolute inset-0 will-change-transform">
-        <motion.img
-          initial={{ scale: 1.15 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 8, ease: "easeOut" }}
+        <Image
           src={heroImg}
           alt="Culto cinematográfico"
-          className="h-full w-full object-cover"
+          layout="fullWidth"
           width={1920}
           height={1080}
-          fetchPriority="high"
-          decoding="async"
+          priority
+          background="auto"
+          className="h-full w-full object-cover"
         />
-
       </motion.div>
+
 
       {/* Overlays — escuro para contraste */}
       <div className="absolute inset-0 bg-background/55" />
