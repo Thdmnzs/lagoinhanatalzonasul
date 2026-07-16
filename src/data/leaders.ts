@@ -68,6 +68,7 @@ export const LEADER_CARDS: LeaderCardData[] = [
   {
     id: "follow",
     ministries: ["Follow"],
+    groupPhoto: liviaGustavoPhoto.url,
     people: [
       { name: "Lívia", phone: "558499023155" },
       { name: "Gustavo", phone: "558499140330" },
@@ -81,6 +82,7 @@ export const LEADER_CARDS: LeaderCardData[] = [
   {
     id: "legacy",
     ministries: ["Legacy"],
+    groupPhoto: mizaelEllenPhoto.url,
     people: [
       { name: "Mizael", phone: "5569992022235" },
       { name: "Ellen", phone: "5584992038001" },
