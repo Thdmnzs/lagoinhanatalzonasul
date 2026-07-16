@@ -10,6 +10,14 @@ export type LeaderCardData = {
   people: LeaderPerson[];
 };
 
+import pauloPhoto from "@/assets/leaders/paulo.png.asset.json";
+import auriPhoto from "@/assets/leaders/auri.png.asset.json";
+import ameliaPhoto from "@/assets/leaders/amelia.png.asset.json";
+import ronaldyPhoto from "@/assets/leaders/ronaldy.png.asset.json";
+import kdjaPhoto from "@/assets/leaders/kdja.png.asset.json";
+import myllaPhoto from "@/assets/leaders/mylla.png.asset.json";
+import erikaPhoto from "@/assets/leaders/erika.png.asset.json";
+
 // Cards já unificados:
 // - Ministério com 2 líderes  → 1 card com ambos.
 // - Mesma pessoa em 2 ministérios → 1 card com os dois ministérios.
