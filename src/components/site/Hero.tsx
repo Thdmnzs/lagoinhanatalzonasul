@@ -1,7 +1,7 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import { ArrowRight, ChevronDown } from "lucide-react";
-import heroImg from "@/assets/hero-bg.jpg";
+import heroImg from "@/assets/hero-bg.webp";
 import logo from "@/assets/logo-lagoinha.png";
 
 export function Hero() {
