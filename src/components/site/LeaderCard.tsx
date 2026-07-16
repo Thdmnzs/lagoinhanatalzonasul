@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
 import { MessageCircle, Phone } from "lucide-react";
+import { Image } from "@unpic/react";
 import { getInitials, type LeaderCardData } from "@/data/leaders";
 
 function formatPhone(phone: string): string {
@@ -50,13 +51,16 @@ export function LeaderCard({
       <div className="relative flex items-center justify-center">
         {card.groupPhoto ? (
           <div className="h-28 w-28 rounded-full border border-gold/40 bg-gradient-to-br from-background to-secondary flex items-center justify-center overflow-hidden">
-            <img
+            <Image
               src={card.groupPhoto}
               alt={card.people.map((p) => p.name).join(" e ")}
-              loading="lazy"
-              decoding="async"
+              layout="constrained"
+              width={112}
+              height={112}
+              background="auto"
               className="h-full w-full object-cover object-top"
             />
+
 
           </div>
         ) : card.people.length > 1 ? (
@@ -67,11 +71,16 @@ export function LeaderCard({
                 className="h-20 w-20 rounded-full border border-gold/40 bg-gradient-to-br from-background to-secondary flex items-center justify-center ring-2 ring-background overflow-hidden"
               >
                 {p.photo ? (
-                  <img loading="lazy" decoding="async"
+                  <Image
                     src={p.photo}
                     alt={p.name}
+                    layout="constrained"
+                    width={80}
+                    height={80}
+                    background="auto"
                     className="h-full w-full object-cover object-top"
                   />
+
                 ) : (
                   <span className="font-display text-xl font-bold text-gradient-gold">
                     {getInitials(p.name)}
@@ -83,11 +92,16 @@ export function LeaderCard({
         ) : (
           <div className="h-28 w-28 rounded-full border border-gold/40 bg-gradient-to-br from-background to-secondary flex items-center justify-center overflow-hidden">
             {card.people[0].photo ? (
-              <img loading="lazy" decoding="async"
+              <Image
                 src={card.people[0].photo}
                 alt={card.people[0].name}
+                layout="constrained"
+                width={112}
+                height={112}
+                background="auto"
                 className="h-full w-full object-cover object-top"
               />
+
             ) : (
               <span className="font-display text-3xl font-bold text-gradient-gold">
                 {getInitials(card.people[0].name)}
