@@ -8,6 +8,7 @@ export type LeaderCardData = {
   id: string;
   ministries: string[];
   people: LeaderPerson[];
+  groupPhoto?: string;
 };
 
 import pauloPhoto from "@/assets/leaders/paulo.png.asset.json";
@@ -17,6 +18,10 @@ import ronaldyPhoto from "@/assets/leaders/ronaldy.png.asset.json";
 import kdjaPhoto from "@/assets/leaders/kdja.png.asset.json";
 import myllaPhoto from "@/assets/leaders/mylla.png.asset.json";
 import erikaPhoto from "@/assets/leaders/erika.png.asset.json";
+import jrSolPhoto from "@/assets/leaders/jr-sol.png.asset.json";
+import mizaelEllenPhoto from "@/assets/leaders/mizael-ellen.png.asset.json";
+import liviaGustavoPhoto from "@/assets/leaders/livia-gustavo.png.asset.json";
+import andersonDaniPhoto from "@/assets/leaders/anderson-dani.png.asset.json";
 
 // Cards já unificados:
 // - Ministério com 2 líderes  → 1 card com ambos.
@@ -35,6 +40,7 @@ export const LEADER_CARDS: LeaderCardData[] = [
   {
     id: "voluntariado",
     ministries: ["Voluntariado"],
+    groupPhoto: jrSolPhoto.url,
     people: [
       { name: "Junior", phone: "5584998795576" },
       { name: "Sol", phone: "558491335775" },
@@ -48,6 +54,7 @@ export const LEADER_CARDS: LeaderCardData[] = [
   {
     id: "geracoes",
     ministries: ["Gerações"],
+    groupPhoto: andersonDaniPhoto.url,
     people: [
       { name: "Anderson", phone: "5584999681650" },
       { name: "Dani", phone: "558494128396" },
@@ -61,6 +68,7 @@ export const LEADER_CARDS: LeaderCardData[] = [
   {
     id: "follow",
     ministries: ["Follow"],
+    groupPhoto: liviaGustavoPhoto.url,
     people: [
       { name: "Lívia", phone: "558499023155" },
       { name: "Gustavo", phone: "558499140330" },
@@ -74,6 +82,7 @@ export const LEADER_CARDS: LeaderCardData[] = [
   {
     id: "legacy",
     ministries: ["Legacy"],
+    groupPhoto: mizaelEllenPhoto.url,
     people: [
       { name: "Mizael", phone: "5569992022235" },
       { name: "Ellen", phone: "5584992038001" },

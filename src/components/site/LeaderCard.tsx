@@ -46,7 +46,15 @@ export function LeaderCard({
     >
       {/* Placeholder(s) circular(es) com iniciais */}
       <div className="relative flex items-center justify-center">
-        {card.people.length > 1 ? (
+        {card.groupPhoto ? (
+          <div className="h-28 w-28 rounded-full border border-gold/40 bg-gradient-to-br from-background to-secondary flex items-center justify-center overflow-hidden">
+            <img
+              src={card.groupPhoto}
+              alt={card.people.map((p) => p.name).join(" e ")}
+              className="h-full w-full object-cover object-top"
+            />
+          </div>
+        ) : card.people.length > 1 ? (
           <div className="flex -space-x-4">
             {card.people.map((p) => (
               <div
