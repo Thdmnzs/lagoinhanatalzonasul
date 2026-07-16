@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { Image } from "@unpic/react";
 import pastorImg from "@/assets/pastor.webp";
 import { FadeIn, SectionLabel } from "./Section";
 
@@ -9,16 +10,19 @@ export function Pastor() {
       <div className="relative mx-auto max-w-7xl grid lg:grid-cols-12 gap-16 items-center">
         <FadeIn className="lg:col-span-5 relative">
           <div className="relative overflow-hidden rounded-md shadow-elegant">
-            <motion.img
-              whileHover={{ scale: 1.04 }}
-              transition={{ duration: 1.5 }}
-              src={pastorImg}
-              alt="Pastor Paulo Barreto"
-              loading="lazy"
-              width={1024}
-              height={1280}
-              className="w-full h-[640px] object-cover"
-            />
+            <motion.div whileHover={{ scale: 1.04 }} transition={{ duration: 1.5 }} className="w-full h-[640px]">
+              <Image
+                src={pastorImg}
+                alt="Pastor Paulo Barreto"
+                layout="constrained"
+                width={1024}
+                height={1280}
+                sizes="(min-width: 1024px) 40vw, 100vw"
+                background="auto"
+                className="w-full h-[640px] object-cover"
+              />
+            </motion.div>
+
             <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
             <div className="absolute bottom-6 left-6 right-6">
               <div className="text-[10px] uppercase tracking-[0.3em] text-gold">Pastor Sênior</div>
