@@ -51,19 +51,35 @@ export function LeaderCard({
             {card.people.map((p) => (
               <div
                 key={p.name}
-                className="h-20 w-20 rounded-full border border-gold/40 bg-gradient-to-br from-background to-secondary flex items-center justify-center ring-2 ring-background"
+                className="h-20 w-20 rounded-full border border-gold/40 bg-gradient-to-br from-background to-secondary flex items-center justify-center ring-2 ring-background overflow-hidden"
               >
-                <span className="font-display text-xl font-bold text-gradient-gold">
-                  {getInitials(p.name)}
-                </span>
+                {p.photo ? (
+                  <img
+                    src={p.photo}
+                    alt={p.name}
+                    className="h-full w-full object-cover object-top"
+                  />
+                ) : (
+                  <span className="font-display text-xl font-bold text-gradient-gold">
+                    {getInitials(p.name)}
+                  </span>
+                )}
               </div>
             ))}
           </div>
         ) : (
-          <div className="h-28 w-28 rounded-full border border-gold/40 bg-gradient-to-br from-background to-secondary flex items-center justify-center">
-            <span className="font-display text-3xl font-bold text-gradient-gold">
-              {getInitials(card.people[0].name)}
-            </span>
+          <div className="h-28 w-28 rounded-full border border-gold/40 bg-gradient-to-br from-background to-secondary flex items-center justify-center overflow-hidden">
+            {card.people[0].photo ? (
+              <img
+                src={card.people[0].photo}
+                alt={card.people[0].name}
+                className="h-full w-full object-cover object-top"
+              />
+            ) : (
+              <span className="font-display text-3xl font-bold text-gradient-gold">
+                {getInitials(card.people[0].name)}
+              </span>
+            )}
           </div>
         )}
         {active && (
