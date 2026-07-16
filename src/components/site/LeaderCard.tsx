@@ -53,8 +53,11 @@ export function LeaderCard({
             <img
               src={card.groupPhoto}
               alt={card.people.map((p) => p.name).join(" e ")}
+              loading="lazy"
+              decoding="async"
               className="h-full w-full object-cover object-top"
             />
+
           </div>
         ) : card.people.length > 1 ? (
           <div className="flex -space-x-4">
