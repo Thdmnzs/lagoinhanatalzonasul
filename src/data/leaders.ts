@@ -8,6 +8,7 @@ export type LeaderCardData = {
   id: string;
   ministries: string[];
   people: LeaderPerson[];
+  groupPhoto?: string;
 };
 
 import pauloPhoto from "@/assets/leaders/paulo.png.asset.json";
@@ -17,6 +18,10 @@ import ronaldyPhoto from "@/assets/leaders/ronaldy.png.asset.json";
 import kdjaPhoto from "@/assets/leaders/kdja.png.asset.json";
 import myllaPhoto from "@/assets/leaders/mylla.png.asset.json";
 import erikaPhoto from "@/assets/leaders/erika.png.asset.json";
+import jrSolPhoto from "@/assets/leaders/jr-sol.png.asset.json";
+import mizaelEllenPhoto from "@/assets/leaders/mizael-ellen.png.asset.json";
+import liviaGustavoPhoto from "@/assets/leaders/livia-gustavo.png.asset.json";
+import andersonDaniPhoto from "@/assets/leaders/anderson-dani.png.asset.json";
 
 // Cards já unificados:
 // - Ministério com 2 líderes  → 1 card com ambos.
