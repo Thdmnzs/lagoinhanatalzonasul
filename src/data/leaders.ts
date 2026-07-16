@@ -1,6 +1,7 @@
 export type LeaderPerson = {
   name: string;
   phone: string;
+  photo?: string;
 };
 
 export type LeaderCardData = {
