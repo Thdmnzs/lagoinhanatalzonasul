@@ -56,7 +56,7 @@ export const LEADER_CARDS: LeaderCardData[] = [
   {
     id: "grupo-crescimento",
     ministries: ["Grupo de Crescimento"],
-    people: [{ name: "Amélia Rodrigues", phone: "5584988600242" }],
+    people: [{ name: "Amélia Rodrigues", phone: "5584988600242", photo: ameliaPhoto.url }],
   },
   {
     id: "follow",
