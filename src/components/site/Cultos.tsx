@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { Image } from "@unpic/react";
 import { FadeIn, SectionLabel } from "./Section";
 import g1 from "@/assets/gallery-1.webp";
 import g2 from "@/assets/gallery-2.webp";
@@ -6,6 +7,7 @@ import g3 from "@/assets/gallery-3.webp";
 import g4 from "@/assets/gallery-4.webp";
 import g5 from "@/assets/gallery-5.webp";
 import hero from "@/assets/hero.webp";
+
 
 const CULTOS = [
   { day: "Quinta-feira", name: "Culto Fé", time: "20h00" },
