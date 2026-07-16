@@ -22,6 +22,9 @@ import jrSolPhoto from "@/assets/leaders/jr-sol.png.asset.json";
 import mizaelEllenPhoto from "@/assets/leaders/mizael-ellen.png.asset.json";
 import liviaGustavoPhoto from "@/assets/leaders/livia-gustavo.png.asset.json";
 import andersonDaniPhoto from "@/assets/leaders/anderson-dani.png.asset.json";
+import gersonPhoto from "@/assets/leaders/gerson.png.asset.json";
+import marcioPhoto from "@/assets/leaders/marcio.png.asset.json";
+import cristianaPhoto from "@/assets/leaders/cristiana.png.asset.json";
 
 // Cards já unificados:
 // - Ministério com 2 líderes  → 1 card com ambos.
