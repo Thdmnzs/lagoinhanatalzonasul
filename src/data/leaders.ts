@@ -40,6 +40,7 @@ export const LEADER_CARDS: LeaderCardData[] = [
   {
     id: "voluntariado",
     ministries: ["Voluntariado"],
+    groupPhoto: jrSolPhoto.url,
     people: [
       { name: "Junior", phone: "5584998795576" },
       { name: "Sol", phone: "558491335775" },
