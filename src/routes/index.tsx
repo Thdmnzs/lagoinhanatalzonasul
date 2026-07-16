@@ -23,10 +23,14 @@ export const Route = createFileRoute("/")({
       { property: "og:type", content: "website" },
       { property: "og:url", content: "/" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [
+      { rel: "canonical", href: "/" },
+      { rel: "dns-prefetch", href: "https://wa.me" },
+    ],
   }),
   component: Index,
 });
+
 
 function Index() {
   return (
