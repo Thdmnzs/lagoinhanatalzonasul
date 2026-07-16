@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useInView, motion } from "motion/react";
+import { Image } from "@unpic/react";
 import communityImg from "@/assets/community.webp";
 import { FadeIn, SectionLabel } from "./Section";
 
@@ -70,16 +71,19 @@ export function About() {
 
           <FadeIn delay={0.2} className="lg:col-span-7 relative">
             <div className="relative overflow-hidden rounded-md shadow-elegant">
-              <motion.img
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 1.2 }}
-                src={communityImg}
-                alt="Templo Lagoinha Zona Sul"
-                loading="lazy"
-                width={1280}
-                height={1024}
-                className="h-[560px] w-full object-cover"
-              />
+              <motion.div whileHover={{ scale: 1.05 }} transition={{ duration: 1.2 }} className="h-[560px] w-full">
+                <Image
+                  src={communityImg}
+                  alt="Templo Lagoinha Zona Sul"
+                  layout="constrained"
+                  width={1280}
+                  height={1024}
+                  sizes="(min-width: 1024px) 60vw, 100vw"
+                  background="auto"
+                  className="h-[560px] w-full object-cover"
+                />
+              </motion.div>
+
               <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
             </div>
             <div className="absolute -bottom-8 -left-8 glass rounded-md p-5 hidden md:block">

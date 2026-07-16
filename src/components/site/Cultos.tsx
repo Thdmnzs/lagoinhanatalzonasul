@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { Image } from "@unpic/react";
 import { FadeIn, SectionLabel } from "./Section";
 import g1 from "@/assets/gallery-1.webp";
 import g2 from "@/assets/gallery-2.webp";
@@ -6,6 +7,7 @@ import g3 from "@/assets/gallery-3.webp";
 import g4 from "@/assets/gallery-4.webp";
 import g5 from "@/assets/gallery-5.webp";
 import hero from "@/assets/hero.webp";
+
 
 const CULTOS = [
   { day: "Quinta-feira", name: "Culto Fé", time: "20h00" },
@@ -83,13 +85,16 @@ export function Cultos() {
           {GALLERY.map((g, i) => (
             <FadeIn key={i} delay={i * 0.06} className={g.span}>
               <div className="group relative h-full w-full overflow-hidden rounded-sm">
-                <img
+                <Image
                   src={g.src}
                   alt={g.label}
-                  loading="lazy"
-                  decoding="async"
+                  layout="fullWidth"
+                  aspectRatio={1}
+                  sizes="(min-width: 768px) 25vw, 50vw"
+                  background="auto"
                   className={`h-full w-full object-cover ${g.pos} transition-transform duration-700 group-hover:scale-110`}
                 />
+
 
                 <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/30 to-transparent" />
                 <div className="absolute bottom-4 left-4 text-xs uppercase tracking-[0.25em] text-gold">

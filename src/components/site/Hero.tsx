@@ -1,8 +1,10 @@
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import { ArrowRight, ChevronDown } from "lucide-react";
+import { Image } from "@unpic/react";
 import heroImg from "@/assets/hero-bg.webp";
 import logo from "@/assets/logo-lagoinha.png";
+
 
 export function Hero() {
   const ref = useRef<HTMLElement>(null);
@@ -13,20 +15,18 @@ export function Hero() {
   return (
     <section ref={ref} id="inicio" className="relative min-h-screen w-full overflow-hidden grain">
       <motion.div style={{ y, scale }} className="absolute inset-0 will-change-transform">
-        <motion.img
-          initial={{ scale: 1.15 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 8, ease: "easeOut" }}
+        <Image
           src={heroImg}
           alt="Culto cinematográfico"
+          layout="fullWidth"
+          aspectRatio={1920 / 1080}
+          priority
+          background="auto"
           className="h-full w-full object-cover"
-          width={1920}
-          height={1080}
-          fetchPriority="high"
-          decoding="async"
         />
-
       </motion.div>
+
+
 
       {/* Overlays — escuro para contraste */}
       <div className="absolute inset-0 bg-background/55" />
@@ -47,17 +47,23 @@ export function Hero() {
           </span>
         </motion.div>
 
-        <motion.img
+        <motion.div
           initial={{ opacity: 0, scale: 0.85 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.1, delay: 0.3 }}
-          src={logo}
-          alt="Lagoinha Natal Zona Sul"
-          width={112}
-          height={112}
-          decoding="async"
-          className="mb-6 h-24 w-24 sm:h-28 sm:w-28 object-contain opacity-90"
-        />
+          className="mb-6 h-24 w-24 sm:h-28 sm:w-28 opacity-90"
+        >
+          <Image
+            src={logo}
+            alt="Lagoinha Natal Zona Sul"
+            layout="constrained"
+            width={112}
+            height={112}
+            priority
+            className="h-full w-full object-contain"
+          />
+        </motion.div>
+
 
 
         <motion.h1
