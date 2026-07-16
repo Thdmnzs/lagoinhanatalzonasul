@@ -27,6 +27,8 @@ export function LeaderCard({
       : card.people[0].name;
   const ministriesLine = card.id === "pastor-senior"
     ? card.ministries[0].toUpperCase()
+    : card.id === "crie-adm"
+    ? "LÍDER DO CRIE · ADMINISTRADOR OPERACIONAL"
     : card.ministries.length > 1
     ? `Líder de ${card.ministries.join(" · ")}`
     : card.people.length > 1
