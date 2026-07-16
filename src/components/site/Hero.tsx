@@ -22,7 +22,10 @@ export function Hero() {
           className="h-full w-full object-cover"
           width={1920}
           height={1080}
+          fetchPriority="high"
+          decoding="async"
         />
+
       </motion.div>
 
       {/* Overlays — escuro para contraste */}
@@ -50,8 +53,12 @@ export function Hero() {
           transition={{ duration: 1.1, delay: 0.3 }}
           src={logo}
           alt="Lagoinha Natal Zona Sul"
+          width={112}
+          height={112}
+          decoding="async"
           className="mb-6 h-24 w-24 sm:h-28 sm:w-28 object-contain opacity-90"
         />
+
 
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
