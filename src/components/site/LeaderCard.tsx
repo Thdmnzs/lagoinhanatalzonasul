@@ -125,7 +125,10 @@ export function LeaderCard({
       <div className="mt-auto flex flex-col gap-2 w-full">
         {card.people.map((p) => {
           const hasPhone = p.phone.trim().length > 0;
-          const first = p.name.split(" ")[0];
+          const nameParts = p.name.split(" ");
+          const first = (p.name.startsWith("Pr.") || p.name.startsWith("Pra.")) && nameParts.length > 1
+            ? `${nameParts[0]} ${nameParts[1]}`
+            : nameParts[0];
           return hasPhone ? (
             <a
               key={p.name}
