@@ -87,8 +87,10 @@ export function Cultos() {
                   src={g.src}
                   alt={g.label}
                   loading="lazy"
+                  decoding="async"
                   className={`h-full w-full object-cover ${g.pos} transition-transform duration-700 group-hover:scale-110`}
                 />
+
                 <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/30 to-transparent" />
                 <div className="absolute bottom-4 left-4 text-xs uppercase tracking-[0.25em] text-gold">
                   {g.label}
