@@ -82,14 +82,14 @@ export const LEADER_CARDS: LeaderCardData[] = [
   {
     id: "link",
     ministries: ["Link"],
-    people: [{ name: "Kdja Laurentina", phone: "5584999296408" }],
+    people: [{ name: "Kdja Laurentina", phone: "5584999296408", photo: kdjaPhoto.url }],
   },
   {
     id: "kids",
     ministries: ["Kids"],
     people: [
-      { name: "Mylla", phone: "5584999322890" },
-      { name: "Erika", phone: "5584994097650" },
+      { name: "Mylla", phone: "5584999322890", photo: myllaPhoto.url },
+      { name: "Erika", phone: "5584994097650", photo: erikaPhoto.url },
     ],
   },
   {
