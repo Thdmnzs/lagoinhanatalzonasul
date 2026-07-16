@@ -1,11 +1,11 @@
 import { motion } from "motion/react";
 import { FadeIn, SectionLabel } from "./Section";
-import g1 from "@/assets/gallery-1.jpg";
-import g2 from "@/assets/gallery-2.jpg";
-import g3 from "@/assets/gallery-3.jpg";
-import g4 from "@/assets/gallery-4.jpg";
-import g5 from "@/assets/gallery-5.jpg";
-import hero from "@/assets/hero.jpg";
+import g1 from "@/assets/gallery-1.webp";
+import g2 from "@/assets/gallery-2.webp";
+import g3 from "@/assets/gallery-3.webp";
+import g4 from "@/assets/gallery-4.webp";
+import g5 from "@/assets/gallery-5.webp";
+import hero from "@/assets/hero.webp";
 
 const CULTOS = [
   { day: "Quinta-feira", name: "Culto Fé", time: "20h00" },
@@ -87,8 +87,10 @@ export function Cultos() {
                   src={g.src}
                   alt={g.label}
                   loading="lazy"
+                  decoding="async"
                   className={`h-full w-full object-cover ${g.pos} transition-transform duration-700 group-hover:scale-110`}
                 />
+
                 <div className="absolute inset-0 bg-gradient-to-t from-background/95 via-background/30 to-transparent" />
                 <div className="absolute bottom-4 left-4 text-xs uppercase tracking-[0.25em] text-gold">
                   {g.label}

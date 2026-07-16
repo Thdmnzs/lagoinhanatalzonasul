@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { useInView, motion } from "motion/react";
-import communityImg from "@/assets/community.jpg";
+import communityImg from "@/assets/community.webp";
 import { FadeIn, SectionLabel } from "./Section";
 
 const PILLARS = [

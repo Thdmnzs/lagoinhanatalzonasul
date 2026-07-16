@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import pastorImg from "@/assets/pastor.jpg";
+import pastorImg from "@/assets/pastor.webp";
 import { FadeIn, SectionLabel } from "./Section";
 
 export function Pastor() {
