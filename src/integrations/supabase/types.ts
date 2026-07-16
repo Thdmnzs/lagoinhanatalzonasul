@@ -117,44 +117,7 @@ export type Database = {
       }
     }
     Views: {
-      leaders_public: {
-        Row: {
-          active: boolean | null
-          display_order: number | null
-          id: string | null
-          ministry_id: string | null
-          name: string | null
-          photo_url: string | null
-          role: string | null
-        }
-        Insert: {
-          active?: boolean | null
-          display_order?: number | null
-          id?: string | null
-          ministry_id?: string | null
-          name?: string | null
-          photo_url?: string | null
-          role?: string | null
-        }
-        Update: {
-          active?: boolean | null
-          display_order?: number | null
-          id?: string | null
-          ministry_id?: string | null
-          name?: string | null
-          photo_url?: string | null
-          role?: string | null
-        }
-        Relationships: [
-          {
-            foreignKeyName: "leaders_ministry_id_fkey"
-            columns: ["ministry_id"]
-            isOneToOne: false
-            referencedRelation: "ministries"
-            referencedColumns: ["id"]
-          },
-        ]
-      }
+      [_ in never]: never
     }
     Functions: {
       has_role: {
