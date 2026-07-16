@@ -22,6 +22,9 @@ import jrSolPhoto from "@/assets/leaders/jr-sol.png.asset.json";
 import mizaelEllenPhoto from "@/assets/leaders/mizael-ellen.png.asset.json";
 import liviaGustavoPhoto from "@/assets/leaders/livia-gustavo.png.asset.json";
 import andersonDaniPhoto from "@/assets/leaders/anderson-dani.png.asset.json";
+import gersonPhoto from "@/assets/leaders/gerson.png.asset.json";
+import marcioPhoto from "@/assets/leaders/marcio.png.asset.json";
+import cristianaPhoto from "@/assets/leaders/cristiana.png.asset.json";
 
 // Cards já unificados:
 // - Ministério com 2 líderes  → 1 card com ambos.
@@ -49,7 +52,7 @@ export const LEADER_CARDS: LeaderCardData[] = [
   {
     id: "intercessao",
     ministries: ["Intercessão"],
-    people: [{ name: "Cristiana", phone: "5584991903834" }],
+    people: [{ name: "Cristiana", phone: "5584991903834", photo: cristianaPhoto.url }],
   },
   {
     id: "geracoes",
@@ -104,12 +107,12 @@ export const LEADER_CARDS: LeaderCardData[] = [
   {
     id: "crie-adm",
     ministries: ["Crie", "Administrador Operacional"],
-    people: [{ name: "Gerson Gonçalves", phone: "5511998759720" }],
+    people: [{ name: "Gerson Gonçalves", phone: "5511998759720", photo: gersonPhoto.url }],
   },
   {
     id: "hero",
     ministries: ["Hero"],
-    people: [{ name: "Marcio Bueno", phone: "5584981277292" }],
+    people: [{ name: "Marcio Bueno", phone: "5584981277292", photo: marcioPhoto.url }],
   },
 ];
 
