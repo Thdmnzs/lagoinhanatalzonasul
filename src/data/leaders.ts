@@ -52,7 +52,7 @@ export const LEADER_CARDS: LeaderCardData[] = [
   {
     id: "intercessao",
     ministries: ["Intercessão"],
-    people: [{ name: "Cristiana", phone: "5584991903834" }],
+    people: [{ name: "Cristiana", phone: "5584991903834", photo: cristianaPhoto.url }],
   },
   {
     id: "geracoes",
