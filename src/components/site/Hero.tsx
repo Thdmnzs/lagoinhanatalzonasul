@@ -47,17 +47,23 @@ export function Hero() {
           </span>
         </motion.div>
 
-        <motion.img
+        <motion.div
           initial={{ opacity: 0, scale: 0.85 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.1, delay: 0.3 }}
-          src={logo}
-          alt="Lagoinha Natal Zona Sul"
-          width={112}
-          height={112}
-          decoding="async"
-          className="mb-6 h-24 w-24 sm:h-28 sm:w-28 object-contain opacity-90"
-        />
+          className="mb-6 h-24 w-24 sm:h-28 sm:w-28 opacity-90"
+        >
+          <Image
+            src={logo}
+            alt="Lagoinha Natal Zona Sul"
+            layout="constrained"
+            width={112}
+            height={112}
+            priority
+            className="h-full w-full object-contain"
+          />
+        </motion.div>
+
 
 
         <motion.h1
