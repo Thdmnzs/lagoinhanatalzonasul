@@ -40,7 +40,7 @@ export function Cultos() {
           </p>
         </FadeIn>
 
-        <div className="mt-20 grid md:grid-cols-3 gap-6">
+        <div className="mt-20 grid md:grid-cols-4 gap-6">
           {CULTOS.map((c, i) => (
             <FadeIn key={i} delay={i * 0.12}>
               <motion.div
