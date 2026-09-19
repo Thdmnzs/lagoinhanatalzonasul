@@ -10,6 +10,7 @@ import hero from "@/assets/hero.webp";
 
 
 const CULTOS = [
+  { day: "Terça-feira", name: "Culto Hope", time: "20h00" },
   { day: "Quinta-feira", name: "Culto Fé", time: "20h00" },
   { day: "Domingo", name: "Culto Celebração", time: "10h00" },
   { day: "Domingo", name: "Culto Celebração", time: "17h00" },
