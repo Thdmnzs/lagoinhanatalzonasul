@@ -10,6 +10,7 @@ import hero from "@/assets/hero.webp";
 
 
 const CULTOS = [
+  { day: "Terça-feira", name: "Culto Hope", time: "20h00" },
   { day: "Quinta-feira", name: "Culto Fé", time: "20h00" },
   { day: "Domingo", name: "Culto Celebração", time: "10h00" },
   { day: "Domingo", name: "Culto Celebração", time: "17h00" },
@@ -39,7 +40,7 @@ export function Cultos() {
           </p>
         </FadeIn>
 
-        <div className="mt-20 grid md:grid-cols-3 gap-6">
+        <div className="mt-20 grid md:grid-cols-4 gap-6">
           {CULTOS.map((c, i) => (
             <FadeIn key={i} delay={i * 0.12}>
               <motion.div
