@@ -51,7 +51,7 @@ export function Cultos() {
                 <div className="relative">
                   <div className="text-[10px] uppercase tracking-[0.3em] text-gold">{c.day}</div>
                   <div className="mt-6 font-display text-3xl font-bold">{c.name}</div>
-                  <div className="mt-10 flex items-end justify-between gap-4">
+                  <div className="mt-10 flex flex-col gap-5 md:flex-row md:items-end md:justify-between md:gap-4">
                     <div className="flex flex-col gap-3">
                       {c.times.map((t, j) => (
                         <div key={j} className="font-display text-6xl font-bold text-gradient-gold leading-none">
