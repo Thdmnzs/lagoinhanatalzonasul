@@ -10,10 +10,9 @@ import hero from "@/assets/hero.webp";
 
 
 const CULTOS = [
-  { day: "Terça-feira", name: "Culto Hope", time: "20h00" },
-  { day: "Quinta-feira", name: "Culto Fé", time: "20h00" },
-  { day: "Domingo", name: "Culto Celebração", time: "10h00" },
-  { day: "Domingo", name: "Culto Celebração", time: "17h00" },
+  { day: "Terça-feira", name: "Culto Hope", times: ["20h00"] },
+  { day: "Quinta-feira", name: "Culto Fé", times: ["20h00"] },
+  { day: "Domingo", name: "Culto Celebração", times: ["10h00", "18h00"] },
 ];
 
 const GALLERY = [
